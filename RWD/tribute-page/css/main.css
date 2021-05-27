@@ -1,16 +1,31 @@
-h2 {
-    color: green;
+body {
+    background-color: rgba(rgb(160, 160, 160), green, blue, alpha);
 }
 
-p {
-    color: red;
-
+h1 {
+    color: rgb(0, 0, 0);
+    font-family: 'Titillium Web';
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: -20px;
+    padding-bottom: -20px;
 }
+
 img {
-max-width: 100%;
+  max-width: 80%;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  width: 800px;
+}
+.txt-default {
+    font-family: 'Titillium Web';
+    text-align: center;
+    font-weight: normal;
+    color: rgb(60, 60, 60);
+}
+.p-subtitle {
+    font-size: 22px;
 }
