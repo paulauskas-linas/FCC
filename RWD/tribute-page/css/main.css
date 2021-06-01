@@ -1,6 +1,17 @@
 body {
-    background-color: rgba(rgb(160, 160, 160), green, blue, alpha);
+    padding: auto;
+    margin: 0;
 }
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: #c9c7c7;
+    padding: 50px;
+    margin: auto;
+}
+
 
 h1 {
     color: rgb(0, 0, 0);
@@ -13,12 +24,29 @@ h1 {
 }
 
 img {
-  max-width: 80%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 800px;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+.flex-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.flex-item {
+    background-color: #9f8ec7;
+    max-width: 80%;
+    width: 800px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+
 }
 .txt-default {
     font-family: 'Titillium Web';
