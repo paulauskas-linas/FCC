@@ -8,23 +8,23 @@
 </head>
 
 <body>
-   <main id="main" id="flex-container">
+   <main id="main" class="flex-container">
     <div class="flex-item">
-           <h1>Water</h1>
-           <p class="p-subtitle txt-default">The only true alien in our planet</p>
+           <h1 id="title">Water</h1>
+           <p class="p-subtitle txt-default">The only true alien in our planet Earth</p>
     </div>
     
-    <div class="main-img">
+    <div id="img-div" class="flex-item">
         <figure>
-            <img src="https://images.pexels.com/photos/5272925/pexels-photo-5272925.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" 
+            <img id="image" src="https://images.pexels.com/photos/5272925/pexels-photo-5272925.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" 
             alt="Waterfall under the rocks">
             <figcaption>
-                <p class="txt-default">Waterfall flowing in rocky ravine. Credit: <a href='https://www.pexels.com/photo/waterfall-flowing-in-rocky-ravine-5272925/' target='_blank'>Julia Wolk</a>@pexels.com</p>
+                <p id="img-caption" class="txt-default">Waterfall flowing in rocky ravine. Credit: <a href='https://www.pexels.com/photo/waterfall-flowing-in-rocky-ravine-5272925/' target='_blank'>Julia Wolk </a>@pexels.com</p>
             </figcaption>
         </figure>
     </div>
 
-    <div>
+    <div id="tribute-info" class="flex-item">
         <h2 class="txt-default">The weirdness of water</h2>
         <ul class="txt-default">
             <li style="text-align: left" class="txt-default" >It arrived on asteroids and comets</li>
@@ -33,6 +33,14 @@
             <li style="text-align: left" class="txt-default">Hot water freezes faster than cold, and no-one knows why this is</li>
             <li style="text-align: left" class="txt-default">Water is one of the most reactive and corrosive chemicals we know</li>
         </ul>
+    </div>
+
+    <div class="flex-item">
+        <p class="txt-default">For more information:</p>
+        <p class="txt-default">
+            <a id="tribute-link" href='https://simple.wikipedia.org/wiki/Water' target='_blank'>Wikipedia</a> 
+            <a href='https://www.theguardian.com/global/2015/may/11/water-weirdest-liquid-planet-scientists-h2o-ice-firefighters' target='_blank'>The Guardian</a>
+        </p>
     </div>
     </main>
 </body>
