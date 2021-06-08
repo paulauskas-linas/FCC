@@ -1,11 +1,15 @@
 body {
     margin: 0;
+    overscroll-behavior: none;
 }
 #main {
     align-content: center;
     background-image: linear-gradient(rgba(255, 255, 255, 0.822), rgb(117, 131, 177));
     margin: auto;
-    padding: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 100%;
+    overflow: none;
 }
 
 
