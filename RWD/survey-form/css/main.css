@@ -1,3 +1,9 @@
+/* .required::after {
+  content: "*";
+  display: inline;
+  margin-left: 0.1em;
+  color: rgb(151, 0, 0);
+} */
 /* Global */ 
 font-family: 'Skranji', cursive;
 
