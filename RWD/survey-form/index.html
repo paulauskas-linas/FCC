@@ -14,8 +14,11 @@
         <p id="description">Oh... I am going to survey the Viking out of you. </p>
     </header>
     <main>
+        <!-- Flex container -->
         <div class="container">
+            <!-- Survey form -->
             <form id="survey-form">
+                <!-- Name group -->
                 <div class="form-group">
                     <label class="required" id="name-label" for="name">What is thy name?</label>
                 <input 
@@ -27,6 +30,7 @@
                 required
                 />
                 </div>
+                <!-- Age group -->
                 <div class="form-group">
                     <label id="number-label" for="number">How many winters have you survived?</label>
                     <input 
@@ -38,23 +42,49 @@
                     class="form-control"
                     placeholder="Age"
                     />
+                </div> 
+                <!-- Email group   -->
                 <div class="form-group">
-                    <label id="email-label" for="email">Name a place for elecetronic crows to reach you</label>
+                    <label class="required" id="email-label" for="email">Name a place for electronic crows to reach you</label>
                     <input 
                     type="email"
                     name="email"
+                    id="email"
                     class="form-control"
                     placeholder="Electronics crows nest"
-                </div>    
+                    required
+                    />
+                </div>
+                <!-- Dropdown group -->
+                <div class="form-group">
+                    <p class="required">Ocupation</p>
+                    <select 
+                    id="dropdown"
+                    name="role"
+                    class="form-control required"
+                    required>
+                    <option disabled selected value>Choose your ocupation</option>
+                    <option value="warior">Warior</option>
+                    <option value="berserker">Berserker</option>
+                    <option value="raider">Raider</option>
+                    <option value="ravager">Ravager</option>
+                    <option value="looter">Looter</option>
+                </select>
+                </div>
+                <!-- Radio group     -->
+                <div class="form-group">
+                    <p>How proficient are you in Old Norse?</p>
 
                 </div>
+
+        </div>
                 <!-- 
                 name - what is thy name
                 age - How many winters have you survived?
                 email - Name a place where electronic eagles could reach you
                 number - How many skulls have you collected
                 dropdown - ocupation (warrior, berserker, raider, ravager, looter)
-                radio - proficiency in the Old Norse (somethin something something)
+                radio - proficiency in the Old Norse (i can scream; i can scream and brothers-in-arms on the left and right will understand me; i know engough to make a family; i know enough to make a business; i can lead)
                 checkbox - which gods favors you? (Odin Thor ...) 
 
                 -->
