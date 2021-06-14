@@ -16,14 +16,47 @@
     <main>
         <div class="container">
             <form id="survey-form">
+                <div class="form-group">
+                    <label class="required" id="name-label" for="name">What is thy name?</label>
+                <input 
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Enter thy name"
+                required
+                />
+                </div>
+                <div class="form-group">
+                    <label id="number-label" for="number">How many winters have you survived?</label>
+                    <input 
+                    type="number"
+                    name="age"
+                    id="number"
+                    min="6"
+                    max="120"
+                    class="form-control"
+                    placeholder="Age"
+                    />
+                <div class="form-group">
+                    <label id="email-label" for="email">Name a place for elecetronic crows to reach you</label>
+                    <input 
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Electronics crows nest"
+                </div>    
+
+                </div>
                 <!-- 
                 name - what is thy name
                 age - How many winters have you survived?
                 email - Name a place where electronic eagles could reach you
                 number - How many skulls have you collected
                 dropdown - ocupation (warrior, berserker, raider, ravager, looter)
-                radio - proficiency in Old Norse (somethin something something)
+                radio - proficiency in the Old Norse (somethin something something)
                 checkbox - which gods favors you? (Odin Thor ...) 
+
                 -->
 
             </form>

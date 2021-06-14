@@ -1,12 +1,10 @@
-/* .required::after {
+/* Global */ 
+.required::after {
   content: "*";
   display: inline;
   margin-left: 0.1em;
   color: rgb(151, 0, 0);
-} */
-/* Global */ 
-
-
+}
 /* Body */
 body {
     align-content: center;
@@ -33,6 +31,8 @@ body {
 
 /* Flex */
 .container {
+  width: 100%;
+  margin: 2rem auto 0.5rem auto;
   
 }
 /* Form */
