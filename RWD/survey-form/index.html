@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- use span tag for asterisks -->
 <html>
 <head>
     <meta charset="UTF-8">
@@ -14,7 +13,7 @@
         <p id="description">Oh... I am going to survey the Viking out of you. </p>
     </header>
     <main>
-        <!-- Flex container -->
+        <!-- Container -->
         <div class="container">
             <!-- Survey form -->
             <form id="survey-form">
@@ -111,21 +110,57 @@
                         class="input-radio"
                         />I CAN LEAD</label>    
                 </div>
-
-        </div>
-                <!-- 
-                name - what is thy name
-                age - How many winters have you survived?
-                email - Name a place where electronic eagles could reach you
-                number - How many skulls have you collected
-                dropdown - ocupation (warrior, berserker, raider, ravager, looter)
-                radio - proficiency in the Old Norse (i can scream; i can scream and brothers-in-arms on the left and right will understand me; i know engough to make a family; i know enough to make a business; i can lead)
-                checkbox - which gods favors you? (Odin Thor ...) 
-
-                -->
-
+                <!-- Checkbox group -->
+                <div class="form-group">
+                    <p>Which gods do favor you?</p>
+                    <label>
+                        <input 
+                        name="prefer"
+                        value="odin"
+                        type="checkbox"
+                        class="input-checkbox"/>Odin</label>
+                    <label>
+                        <input 
+                        name="prefer"
+                        value="thor"
+                        type="checkbox"
+                        class="input-checkbox"/>Thor</label>
+                    <label>
+                        <input 
+                        name="prefer"
+                        value="balder"
+                        type="checkbox"
+                        class="input-checkbox"/>Balder</label>
+                    <label>
+                        <input 
+                        name="prefer"
+                        value="hel"
+                        type="checkbox"
+                        class="input-checkbox"/>Hel</label>
+                    <label>
+                        <input 
+                        name="prefer"
+                        value="heimdall"
+                        type="checkbox"
+                        class="input-checkbox"/>Heimdall</label>   
+                </div>
+                <!-- Textarea -->
+                <div class="form-group">
+                    <p>Do you have anything to add more worthy than your axe?</p>
+                    <textarea
+                    id="comments" 
+                    class="input-textarea"
+                    name="comment"
+                    placeholder="Deliver your message"></textarea>
+                </div>
+                <!-- Submit -->
+                <div class="form-group">
+                    <button
+                    type="submit"
+                    id="submit"
+                    class="submit-button">Submit</button>
+                </div>
             </form>
-
         </div>
     </main>
 </body>
