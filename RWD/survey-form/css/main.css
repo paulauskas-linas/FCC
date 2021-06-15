@@ -31,12 +31,33 @@ body {
 
 /* Flex */
 .container {
-  width: 100%;
+  width: 80%;
   margin: 2rem auto 0.5rem auto;
   
 }
 /* Form */
+.form-control {
+  display: block;
+  height: 2rem;
+  width: 100%;
+}
 
+.form-group {
+  margin: 0 auto 1rem auto;
+  padding: 0.2rem;
+}
+
+.input-radio {
+  display: inline-block;
+  width: 100%;
+}
+
+label {
+  
+}
+input {
+  margin: 0;
+}
 /* Media */
 @media (min-width: 576px) {
     .container {
