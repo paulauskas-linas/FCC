@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/main.css" rel="stylesheet">
-    <title>Document</title>
+    <link href="./css/main.css" rel="stylesheet">
+    <title>The Box</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <a href="/" class="logo">
-        <img src="https://svgshare.com/i/Y_f.svg' title='box" >
+        <img id="header-img" src="https://svgshare.com/i/Y_f.svg' title='box" >
         <div class="logo-text">The Box</div>
         </a>
-        <nav class="main-nav">
+        <nav id="nav-bar">
             <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#features">Pricing</a></li>
-                <li><a href="#features">Subscribe</a></li>
+                <li ><a class="nav-link" href="#features">Features</a></li>
+                <li ><a class="nav-link" href="#features">Pricing</a></li>
+                <li ><a class="nav-link" href="#features">Subscribe</a></li>
             </ul>
         </nav>
     </header>
@@ -28,12 +28,7 @@
         </div>
         <div class="right">
             <p class="title-video">Just look</p>
-            <iframe
-                id="video"
-                height="315"
-                src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0"
-                frameborder="0"
-                allowfullscreen
+            <iframe id="video" height="270" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen
             ></iframe>
         </div>
     </section>
@@ -50,5 +45,47 @@
             </ul>
         </div>
     </section>
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <h3>Choose your best fit</h3>
+        <div class="container-price">
+            <div class="small-box">
+                <h4>Small box</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id neque aliquam vestibulum morbi. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. </p>
+                <form class="form-order">
+                    <input type="button" id="button" value="ORDER NOW"/>
+                </form>
+            </div>
+            <div class="medium-box">
+                <h4>Medium box</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id neque aliquam vestibulum morbi. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. </p>
+                <form class="form-order">
+                    <input type="button" id="button" value="ORDER NOW"/>
+                </form>
+            </div>
+            <div class="large-box">
+                <h4>Large box</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id neque aliquam vestibulum morbi. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. </p>
+                <form class="form-order">
+                    <input type="button" id="button" value="ORDER NOW"/>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="subscribe">
+        <h2>Subscribe</h2>
+        <h3>You know what to do</h3>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input type="email" id="email" name="email" placeholder="Email address" required />
+        <input type="submit" id="submit" value="SUBSCRIBE" />
+        </form>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <span>Copyright 2021, The Box</span>
+    </footer>
 </body>
 </html>

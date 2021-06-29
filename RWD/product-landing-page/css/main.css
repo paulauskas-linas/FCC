@@ -1,0 +1,19 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital@0;1&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Body */
+body {
+    font-family: Chivo, sans-serif;
+    font-size: 1rem;
+    min-height: 100vh;
+}
+
+section {
+    min-height: 100vh;
+}
