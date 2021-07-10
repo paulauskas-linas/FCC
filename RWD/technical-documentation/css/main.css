@@ -8,3 +8,8 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* Grid area definitions. Grid area property assigns name to item  */
+.sideBar { grid-area: sidebar;}
+.mainContent { grid-area: mainContent;}
+

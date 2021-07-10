@@ -8,25 +8,370 @@
     <title>Technical Documentation Page</title>
 </head>
 <body>
-    <nav id="navbar">
-        <header>
-            
-        </header>
-        <ul>
-            <li class="nav-link"></li>
-            <li class="nav-link"></li>
-            <li class="nav-link"></li>
-            <li class="nav-link"></li>
-            <li class="nav-link"></li>
-        </ul>
-    </nav>
-    <main id="main-doc">
-        <section class="main-section">
-            <header>
-                <h1></h1>
-            </header>
-            <p></p>
-        </section>
-    </main>
+    <div class="containerGrid">
+        <div class="sideBar">
+            <nav id="navbar">
+                <header><h1>CSS Grid Short Guide</h1>
+                </header>
+                <div class="navMenu">
+                    <ul>
+                        <a class="nav-link" href="#Intro"><li>Intro</li></a>
+                        <a class="nav-link" href="#Grid_Layout"><li>Grid Layout</li></a>
+                        <a class="nav-link" href="#Grid_Design"><li>Grid Design</li></a>
+                        <a class="nav-link" href="#Reference_Grid_Elements"><li>Reference Grid Elements</li></a>
+                        <a class="nav-link" href="#Reference_Grid_Container"><li>Reference Grid Container</li></a>
+                        <a class="nav-link" href="#Reference_Grid_Template_Explicit"><li>Reference Grid Template Explicit</li></a>
+                        <a class="nav-link" href="#Reference_Grid_Template_Implicit"><li>Reference Grid Template Implicit</li></a>
+                        <a class="nav-link" href="#Reference_Grid_Justification_and_Alignment"><li>Reference Grid Justification and Alignment</li></a>
+                        <a class="nav-link" href="#Reference_Grid_Items_Positioning"><li>Reference Grid Items Positioning</li></a>
+                        <a class="nav-link" href="#Reference_Grid_Items_Justification_and_Alignment"><li>Reference Grid Items Justification and Alignment</li></a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="mainContent">
+            <main id="main-doc">
+                <section class="main-section" id="Intro">
+                    <header>
+                        <h1>Intro</h1>
+                    </header>
+                    <p>CSS Grid Layout (aka “Grid” or “CSS Grid”) is a two-dimensional grid-based layout system that, compared to any web layout system of the past, completely changes the way we design user interfaces. CSS Grid is the very first CSS module created specifically to solve the layout problems we’ve all been hacking our way around for as long as we’ve been making websites.</p>
+                    <p>Disclaimer</p>
+                    <p>Resources used creating this technical documentation:</p>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">Mozilla MDN Web Docs</a></li>
+                        <li><a href="https://www.w3schools.com/css/css_grid.asp">W3 Schools Reference</a></li>
+                        <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Tricks Guide to Grid</a></li>
+                        <li><a href="https://www.hongkiat.com/blog/css-grid-layout-fr-unit/">Honkiat Guide to CSS Grid Layout Fr Unit</a></li>
+                        <li></li>
+                    </ul>
+                </section>
+                <section class="main-section" id="Grid_Layout">
+                    <header>
+                        <h1>Grid Layout</h1>
+                    </header>
+                    <p>Grid Layout controls the layout of its content through the use of a <i>grid</i>: an intersecting set of horizontal and vertical lines which create a sizing and positioning coordinate system for the grid container’s contents. 
+                        <p>Grid Layout features</p>
+                            <ul>
+                                <li>fixed, flexible, and content-based track sizing functions</li>
+                                <li>explicit item placement via forwards (positive) and backwards (negative) numerical grid coordinates, named grid lines, and named grid areas; automatic item placement into empty areas, including reordering with order</li>
+                                <li>space-sensitive track repetition and automatic addition of rows or columns to accommodate additional content</li>
+                                <li>control over alignment and spacing with margins, gutters, and the alignment properties</li>
+                                <li>the ability to overlap content and control layering with z-index</li>
+                            </ul>
+                            <p>Grid containers can be nested or mixed with flex containers as necessary to create more complex layouts</p>
+                        </p>
+                </section>
+                <section class="main-section" id="Grid_Design">
+                    <header>
+                        <h1>Grid Design</h1>
+                    </header>
+                    <p>First thing first - you need to know what you want and need for your required / wanted web page layout.</p>
+                    <p>Basic steps to achieve that</p>
+                    <ul>
+                        <li><b>Create the layout </b> You can use pen and paper or any design software. You need to make it rough with simple naming, eg. header; main content; sidebar; ads sections; footer and anyting else you need depending on the <b>content</b> you need to present. Make several versions of the design for different type of screens. How would you like it to look on phone/ tablet/ TV.</li>
+                        <li><b>Write your content in HTML </b>Now you need to transfer your content to HTML. Use HTML tags such as <i>main section div</i> as building blocks for your layout. Now use previous naming (header; main content and so on) to declare CSS classes for those blocks. </li>
+                        <li><b>Define your layout items names </b>What I mean by that is you need to define layout item (header; main content and so on) as grid areas. Later you will use those names as areas to set where everything goes inside the grid.</li>
+                        <li><b>Define your grid </b>Once you have your content inside HTML and set the basic naming, define the grid using CSS properties</li>
+                        <li><b>Define the grid container </b> You need to define/style your grid container. Is it the whole page? Is it just part of page? How the items are placed? How much space do they take? Adjust HTML and CSS appropriately.</li>
+                        <li><b>Define grid items </b> Now you need to define/style your <i>grid</i> items. Where are they going to be put inside the grid? How much space they would take inside the grid? Again, adjust HTML and CSS appropriately.</li>
+                        <li><b>Add basic styling</b>Adjust the styling in CSS to make it look closer to the design imagined.</li>
+                        <li><b>MAKE IT RESPONSIVE! </b> Now it is time to make the webpage responsive. Make use of grid flow properties add media queries as necessary.</li>
+                        <li><b>Fine tune the styling and add the magic </b> Let your creative self go! Add all needed or wanted styling and animation!</li>
+                    </ul>
+                    <p>The following sections are presented as reference for CSS Grid</p>
+                </section>
+                <section class="main-section" id="Reference_Grid_Elements">
+                    <header>
+                        <h1>Reference Grid Elements</h1>
+                    </header>
+                   <div>
+                    <div>
+                        <p>A grid layout consists of a parent element, with one or more child elements.</p>
+                        <pre><code>
+                                &lt;div class="grid-container">
+                                    &lt;div class="grid-item">One&lt;/div>
+                                    &lt;div class="grid-item">Two&lt;/div>
+                                    &lt;div class="grid-item">Three&lt;/div>
+                                    &lt;div class="grid-item">Four&lt;/div>
+                                    &lt;div class="grid-item">Five&lt;/div>
+                                    &lt;div class="grid-item">Six&lt;/div>
+                                &lt;/div>
+                            </code></pre>
+                    </div>
+                    <figure>
+                        <img src="https://assets.hongkiat.com/uploads/css-grid-layout-fr-unit/basic-usage.jpg" alt="Grid example">
+                        <!-- https://www.hongkiat.com/blog/css-grid-layout-fr-unit/ -->
+                    </figure>
+                   </div>
+                   <div>
+                       <p><b>Terminology</b></p>
+                       <ul>
+                           <li><p><b>Grid Container</b></p> <p>An HTML element on which <i>display:grid</i> is applied.</p> </li>
+                           <li><p><b>Grid Item</b></p> <p><i>Direct</i> descendents of the grid container.</p></li>
+                           <li><p><b>Grid line</b></p><p>The dividing lines that make up the structure of the grid. </p></li>
+                           <li><p><b>Grid Cell</b></p><p>The space between two adjacent column and two adjacent row lines. </p></li>
+                           <li><p><b>Grid Track</b></p><p>The space between two adjacent grid lines. In other words, simply rows or columns.</p></li>
+                           <li><p><b>Grid Area</b></p><p>The space defined by four grid lines.A grid area can be composed of any number of grid cells.</p></li>
+                       </ul>
+                   </div>
+                </section>
+                <section class="main-section" id="Reference_Grid_Container">
+                    <h1>Reference Grid Container</h1>
+                    <div>
+                        <p>Display Property</p>
+                        <p>An HTML element becomes a grid container when its display property is set to <i>grid</i> or <i>inline-grid</i>.</p>
+                    </div>
+                    <div>
+                    <pre><code>
+                        .container {
+                            display: grid;
+                          }
+
+                          .container {
+                            display: inline-grid;
+                          }
+                    </code></pre>
+                   </div>
+                </section>
+                <section class="main-section" id="Reference_Grid_Template_Explicit">
+                    <header>
+                        <h1>Reference Grid Template Explicit</h1>
+                    </header>
+                    <div>
+                        <h3>Rows and Columns</h3>
+                        <p>Defines grid columns and rows using <i>grid-template-row</i> and <i>grid-template-column</i>. Defines the columns and rows of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line. Values inside brackets is the naming of column/row line. Track size accepts these values: <i>length units; auto; minmax(lower value;upper value); repeat(amount; length); min-content; max-content;</i>. Line names can be the same.</p>
+                    </div>
+                    <div>
+                        <pre><code>
+                            .container {
+                                grid-template-columns: [first] 40px [second] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+                                grid-template-rows: [row1-start] 25% [row1-end] 100px [line3] auto [last-line];
+                            }
+                        </code></pre>
+                    </div>
+                    <div>
+                        <h3>Template - Areas</h3>
+                        <p><i>grid-template-area.</i> Defines a grid template by referencing the names of the grid areas which are specified with the <i>grid-area</i> property. Repeating the name of a grid area causes the content to span those cells. A period signifies an empty cell. The syntax itself provides a visualization of the structure of the grid</p>
+                    </div>
+                    <div>
+                        <pre><code>
+                            .item-a {
+                                grid-area: header;
+                              }
+                              .item-b {
+                                grid-area: main;
+                              }
+                              .item-c {
+                                grid-area: sidebar;
+                              }
+                              .item-d {
+                                grid-area: footer;
+                              }
+                              
+                              .container {
+                                display: grid;
+                                grid-template-columns: 50px 50px 50px 50px;
+                                grid-template-rows: auto;
+                                grid-template-areas: 
+                                  "header header header header"
+                                  "main main . sidebar"
+                                  "footer footer footer footer";
+                              }
+                        </code></pre>
+                    </div>
+                    <div>
+                        <img src="https://css-tricks.com/wp-content/uploads/2018/11/dddgrid-template-areas.svg" alt="Grid-template-area example">
+                    </div>
+                    <div>
+                        <h3>Template</h3>
+                        <p><i>grid-template</i> is a shorthand for setting <i>grid-template-rows</i>, <i>grid-template-columns</i>, and <i>grid-template-areas</i> in a single declaration</p>
+                    </div>
+                    <div>
+                        <pre><code>
+                            .container {
+                                grid-template:
+                                  [row1-start] "header header header" 25px [row1-end]
+                                  [row2-start] "footer footer footer" 25px [row2-end]
+                                  / auto 50px auto;
+                              }
+                            is the same as: 
+                            
+                            .container {
+                                grid-template-rows: [row1-start] 25px [row1-end row2-start] 25px [row2-end];
+                                grid-template-columns: auto 50px auto;
+                                grid-template-areas: 
+                                  "header header header" 
+                                  "footer footer footer";
+                              }
+                        </code></pre>
+                    </div>
+                    <div>
+                        <h3>Gaps</h3>
+                        <p><i>row-gap</i>, <i>column-gap</i> and their's shorthand <i>gap</i> determines the size of the grid lines or in other words width between of the gutters between the columns/rows. <i>The gutters are created only between columns/row not on the outer edges</i></p>
+                    </div>
+                    <div>
+                        <pre><code>
+                            .container {
+                                grid-template:
+                                  [row1-start] "header header header" 25px [row1-end]
+                                  [row2-start] "footer footer footer" 25px [row2-end]
+                                  / auto 50px auto;
+                              }
+                            is the same as: 
+                            
+                            .container {
+                                grid-template-rows: [row1-start] 25px [row1-end row2-start] 25px [row2-end];
+                                grid-template-columns: auto 50px auto;
+                                grid-template-areas: 
+                                  "header header header" 
+                                  "footer footer footer";
+                              }
+                        </code></pre>
+                    </div>
+                <div>
+                    <h3>Grid shorthand</h3>
+                    <p>A shorthand for setting all of the following properties in a single declaration: <i>grid-template-rows</i>, <i>grid-template-columns</i>, <i>grid-template-areas</i>, <i>grid-auto-rows</i>, <i>grid-auto-columns</i>, and <i>grid-auto-flow</i> (Note: You can only specify the explicit or the implicit grid properties in a single <i>grid</i> declaration). </p>
+                </div>
+                <div>
+                    <pre><code>
+                        .container {
+                            grid: [row1-start] "header header header" 1fr [row1-end]
+                                  [row2-start] "footer footer footer" 25px [row2-end]
+                                  / auto 50px auto;
+                          }
+                        is the same as: 
+                        
+                        .container {
+                            grid-template-areas: 
+                              "header header header"
+                              "footer footer footer";
+                            grid-template-rows: [row1-start] 1fr [row1-end row2-start] 25px [row2-end];
+                            grid-template-columns: auto 50px auto;    
+                          }
+                    </code></pre>
+                </div>
+                </section>
+                <section class="main-section" id="Reference_Grid_Template_Implicit">
+                    <header>
+                        <h1>Reference Grid Template Implicit</h1>
+                    </header>
+                    <div>
+                        <h3>Brief overview</h3>
+                        <p>If there are more grid items than cells in the grid or when a grid item is placed outside of the explicit grid, the grid container automatically generates grid tracks by adding grid lines to the grid. The explicit grid together with these additional implicit tracks and lines forms the so called implicit grid. The <i>grid-auto-rows and grid-auto-columns</i> properties give us control over the size of implicit tracks. For more information please read this <a href="https://css-tricks.com/difference-explicit-implicit-grids/">CSS tricks article about the difference between explicit and implicit grid.</a> </p>
+                    </div> 
+                </section>
+                <section class="main-section" id="Reference_Grid_Justification_and_Alignment">
+                    <header>
+                        <h1>Reference Grid Justification and Alignment</h1>
+                    </header>
+                    <div>
+                        <h3>Content</h3>
+                        <p>You can align (<i>along horizontal axis of grid container</i>), justify (<i>along vertical axis of grid container</i>)  (shorthand for both <i>place</i>) the whole grid within grid container.</p>
+                    </div>
+                    <div>
+                        <pre><code>
+                            .container {
+                                align-content: start | end | center | stretch | space-around | space-between | space-evenly;    
+                              }
+                            
+                            .container {
+                                justify-content: start | end | center | stretch | space-around | space-between | space-evenly;    
+                              }
+                              
+                            .container {
+                                place-content: align-content / justify-content;
+                              }  
+                        </code></pre>
+                    </div>
+                    <div>
+                        <h3>Items</h3>
+                        <p>You can align (<i>along horizontal axis of grid track</i>), justify (<i>along vertical axis of grid track</i>)  (shorthand for both is <i>place</i>) the grid items within grid container.</p>
+                    </div>
+                    <div>
+                        <pre><code>
+                            .container {
+                                align-items: start | end | center | stretch ;    
+                              }
+                            
+                            .container {
+                                justify-items: start | end | center | stretch ;    
+                              }
+                              
+                            .container {
+                                place-items: align-item / justify-item;
+                              }  
+                        </code></pre>
+                    </div>
+                </section>
+                <section class="main-section" id="Reference_Grid_Items_Positioning">
+                    <header>
+                        <h1>Reference Grid Items Positioning</h1>
+                    </header>
+                    <div>
+                        <h3>Items start | end with column/row start | end</h3>
+                        <p><i>grid-column-start</i> <i>grid-column-end</i> <i>grid-row-start</i> <i>grid-row-end</i> Determines a grid item’s location within the grid by referring to specific grid lines.</p>
+                    </div>
+                    <div>
+                        <pre><code>
+                            .item {
+                                grid-column-start: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
+                                grid-column-end: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
+                                grid-row-start: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
+                                grid-row-end: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
+                                } 
+                        </code></pre>
+                    </div>
+                    <div>
+                        <h3>Items start | end with column/row shorthand </h3>
+                        <p><i>grid-column</i> and grid-row is a shorthand for <i>grid-column-start</i> + <i>grid-column-end</i>, and <i>grid-row-start</i> + <i>grid-row-end</i>, respectively</p>
+                    </div>
+                    <div>
+                        <pre><code>
+                            .item {
+                                grid-column: &lt;start-line> / &lt;end-line> | &lt;start-line> / span &lt;value>;
+                                grid-row: &lt;start-line> / &lt;end-line> | &lt;start-line> / span &lt;value>;
+                              } 
+                        </code></pre>
+                    </div>
+                    <div>
+                        <h3>Items positioning with grid area </h3>
+                        <p>Gives an item a name so that it can be referenced by a template created with the g<i>rid-template-areas</i> property. Alternatively, this property can be used as an even shorter shorthand for <i>grid-row-start</i> + <i>grid-column-start</i> + <i>grid-row-end</i> + <i>grid-column-end</i>.</p>
+                    </div>
+                    <div>
+                        <pre><code>
+                            .item {
+                                grid-area: &lt;name> | &lt;row-start> / &lt;column-start> / &lt;row-end> / &lt;column-end>;
+                              }
+                        </code></pre>
+                    </div>
+                </section>
+                <section class="main-section" id="Reference_Grid_Items_Justification_and_Alignment">
+                    <header>
+                        <h1>Reference Grid Items Justification and Alignment</h1>
+                    </header>
+                    <div>
+                        <h3>Items</h3>
+                        <p>You can align (<i>along horizontal axis of grid cell</i>), justify (<i>along vertical axis of the grid cell</i>)  (shorthand for both is <i>place</i>) the grid item within the grid cell.</p>
+                    </div>
+                    <div>
+                        <pre><code>
+                            .item {
+                                align-self: start | end | center | stretch ;    
+                              }
+                            
+                            .item {
+                                justify-self: start | end | center | stretch ;    
+                              }
+                              
+                            .item {
+                                place-self: align-self / justify-self;
+                              }  
+                        </code></pre>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
 </body>
 </html>
