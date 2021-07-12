@@ -1,4 +1,6 @@
 /* Global  */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -9,7 +11,59 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Grid area definitions. Grid area property assigns name to item  */
+body {
+    font-family: "Hind Siliguri", sans-serif;
+}
+
+/* Grid area declarations. Grid area property assigns name to item  */
 .sideBar { grid-area: sidebar;}
 .mainContent { grid-area: mainContent;}
 
+/* Grid container declarations. Set grid, layout, sizes.  */
+.containerGrid {
+    display: grid;
+    grid-template-areas: "sideBar mainContent";
+    grid-template-columns: 25% 1fr;
+    gap: 2em;
+}
+/* Sidebar lock to top and left */
+.sideBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Sidebar styling */
+
+.sideBar {
+    background-color: rgb(121, 165, 165);
+    padding: 1em;
+    border-radius: 0 0.4em 0.4em 0;
+    height: 100%;
+    box-shadow: 0.3em 0.9em 10px rgb(179, 180, 180);
+}
+
+.navMenu > ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+}
+
+.navMenu > ul > li {
+    padding: 0.3em;
+    margin: 0.1em 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(177, 163, 161);
+    border-radius: 0.3em;
+}
+
+.navMenu > ul > li > a {
+    display: block;
+    text-decoration: none;
+    border-radius: 0.1em;
+}
+.codeSample {
+    display: block;
+}

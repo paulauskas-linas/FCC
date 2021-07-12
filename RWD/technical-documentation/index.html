@@ -8,23 +8,24 @@
     <title>Technical Documentation Page</title>
 </head>
 <body>
+    <a name="totop"></a>
     <div class="containerGrid">
         <div class="sideBar">
             <nav id="navbar">
-                <header><h1>CSS Grid Short Guide</h1>
+                <header><h1><a href="#Intro">CSS Grid Short Guide</a></h1>
                 </header>
                 <div class="navMenu">
                     <ul>
-                        <a class="nav-link" href="#Intro"><li>Intro</li></a>
-                        <a class="nav-link" href="#Grid_Layout"><li>Grid Layout</li></a>
-                        <a class="nav-link" href="#Grid_Design"><li>Grid Design</li></a>
-                        <a class="nav-link" href="#Reference_Grid_Elements"><li>Reference Grid Elements</li></a>
-                        <a class="nav-link" href="#Reference_Grid_Container"><li>Reference Grid Container</li></a>
-                        <a class="nav-link" href="#Reference_Grid_Template_Explicit"><li>Reference Grid Template Explicit</li></a>
-                        <a class="nav-link" href="#Reference_Grid_Template_Implicit"><li>Reference Grid Template Implicit</li></a>
-                        <a class="nav-link" href="#Reference_Grid_Justification_and_Alignment"><li>Reference Grid Justification and Alignment</li></a>
-                        <a class="nav-link" href="#Reference_Grid_Items_Positioning"><li>Reference Grid Items Positioning</li></a>
-                        <a class="nav-link" href="#Reference_Grid_Items_Justification_and_Alignment"><li>Reference Grid Items Justification and Alignment</li></a>
+                        <li><a class="nav-link" href="#Intro">Intro</a></li>
+                        <li><a class="nav-link" href="#Grid_Layout">Grid Layout</a></li>
+                        <li><a class="nav-link" href="#Grid_Design">Grid Design</a></li>
+                        <li><a class="nav-link" href="#_Grid_Elements">Grid Elements</a></li>
+                        <li><a class="nav-link" href="#_Grid_Container">Grid Container</a></li>
+                        <li><a class="nav-link" href="#_Grid_Template_Explicit"> Grid Template Explicit</a></li>
+                        <li><a class="nav-link" href="#_Grid_Template_Implicit"> Grid Template Implicit</a></li>
+                        <li><a class="nav-link" href="#_Grid_Justification_and_Alignment">Grid Justification and Alignment</a></li>
+                        <li><a class="nav-link" href="#_Grid_Items_Positioning"> Grid Items Positioning</a></li>
+                        <li><a class="nav-link" href="#_Grid_Items_Justification_and_Alignment">Grid Items Justification and Alignment</a></li>
                     </ul>
                 </div>
             </nav>
@@ -40,7 +41,7 @@
                     <p>Resources used creating this technical documentation:</p>
                     <ul>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">Mozilla MDN Web Docs</a></li>
-                        <li><a href="https://www.w3schools.com/css/css_grid.asp">W3 Schools Reference</a></li>
+                        <li><a href="https://www.w3schools.com/css/css_grid.asp">W3 Schools </a></li>
                         <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Tricks Guide to Grid</a></li>
                         <li><a href="https://www.hongkiat.com/blog/css-grid-layout-fr-unit/">Honkiat Guide to CSS Grid Layout Fr Unit</a></li>
                         <li></li>
@@ -79,16 +80,16 @@
                         <li><b>MAKE IT RESPONSIVE! </b> Now it is time to make the webpage responsive. Make use of grid flow properties add media queries as necessary.</li>
                         <li><b>Fine tune the styling and add the magic </b> Let your creative self go! Add all needed or wanted styling and animation!</li>
                     </ul>
-                    <p>The following sections are presented as reference for CSS Grid</p>
+                    <p>The following sections are presented as  for CSS Grid</p>
                 </section>
-                <section class="main-section" id="Reference_Grid_Elements">
+                <section class="main-section" id="_Grid_Elements">
                     <header>
-                        <h1>Reference Grid Elements</h1>
+                        <h1> Grid Elements</h1>
                     </header>
                    <div>
                     <div>
                         <p>A grid layout consists of a parent element, with one or more child elements.</p>
-                        <pre><code>
+                        <pre class="codeSample"><code>
                                 &lt;div class="grid-container">
                                     &lt;div class="grid-item">One&lt;/div>
                                     &lt;div class="grid-item">Two&lt;/div>
@@ -116,8 +117,8 @@
                        </ul>
                    </div>
                 </section>
-                <section class="main-section" id="Reference_Grid_Container">
-                    <h1>Reference Grid Container</h1>
+                <section class="main-section" id="_Grid_Container">
+                    <h1> Grid Container</h1>
                     <div>
                         <p>Display Property</p>
                         <p>An HTML element becomes a grid container when its display property is set to <i>grid</i> or <i>inline-grid</i>.</p>
@@ -134,9 +135,9 @@
                     </code></pre>
                    </div>
                 </section>
-                <section class="main-section" id="Reference_Grid_Template_Explicit">
+                <section class="main-section" id="_Grid_Template_Explicit">
                     <header>
-                        <h1>Reference Grid Template Explicit</h1>
+                        <h1> Grid Template Explicit</h1>
                     </header>
                     <div>
                         <h3>Rows and Columns</h3>
@@ -252,18 +253,18 @@
                     </code></pre>
                 </div>
                 </section>
-                <section class="main-section" id="Reference_Grid_Template_Implicit">
+                <section class="main-section" id="_Grid_Template_Implicit">
                     <header>
-                        <h1>Reference Grid Template Implicit</h1>
+                        <h1> Grid Template Implicit</h1>
                     </header>
                     <div>
                         <h3>Brief overview</h3>
                         <p>If there are more grid items than cells in the grid or when a grid item is placed outside of the explicit grid, the grid container automatically generates grid tracks by adding grid lines to the grid. The explicit grid together with these additional implicit tracks and lines forms the so called implicit grid. The <i>grid-auto-rows and grid-auto-columns</i> properties give us control over the size of implicit tracks. For more information please read this <a href="https://css-tricks.com/difference-explicit-implicit-grids/">CSS tricks article about the difference between explicit and implicit grid.</a> </p>
                     </div> 
                 </section>
-                <section class="main-section" id="Reference_Grid_Justification_and_Alignment">
+                <section class="main-section" id="_Grid_Justification_and_Alignment">
                     <header>
-                        <h1>Reference Grid Justification and Alignment</h1>
+                        <h1> Grid Justification and Alignment</h1>
                     </header>
                     <div>
                         <h3>Content</h3>
@@ -304,9 +305,9 @@
                         </code></pre>
                     </div>
                 </section>
-                <section class="main-section" id="Reference_Grid_Items_Positioning">
+                <section class="main-section" id="_Grid_Items_Positioning">
                     <header>
-                        <h1>Reference Grid Items Positioning</h1>
+                        <h1> Grid Items Positioning</h1>
                     </header>
                     <div>
                         <h3>Items start | end with column/row start | end</h3>
@@ -336,7 +337,7 @@
                     </div>
                     <div>
                         <h3>Items positioning with grid area </h3>
-                        <p>Gives an item a name so that it can be referenced by a template created with the g<i>rid-template-areas</i> property. Alternatively, this property can be used as an even shorter shorthand for <i>grid-row-start</i> + <i>grid-column-start</i> + <i>grid-row-end</i> + <i>grid-column-end</i>.</p>
+                        <p>Gives an item a name so that it can be d by a template created with the g<i>rid-template-areas</i> property. Alternatively, this property can be used as an even shorter shorthand for <i>grid-row-start</i> + <i>grid-column-start</i> + <i>grid-row-end</i> + <i>grid-column-end</i>.</p>
                     </div>
                     <div>
                         <pre><code>
@@ -346,9 +347,9 @@
                         </code></pre>
                     </div>
                 </section>
-                <section class="main-section" id="Reference_Grid_Items_Justification_and_Alignment">
+                <section class="main-section" id="_Grid_Items_Justification_and_Alignment">
                     <header>
-                        <h1>Reference Grid Items Justification and Alignment</h1>
+                        <h1> Grid Items Justification and Alignment</h1>
                     </header>
                     <div>
                         <h3>Items</h3>
