@@ -12,7 +12,7 @@
     <div class="containerGrid">
         <div class="sideBar">
             <nav id="navbar">
-                <header><h1><a href="#Intro">CSS Grid Short Guide</a></h1>
+                <header><h1><a class="nav-link-home" href="#Intro">CSS Grid Short Guide</a></h1>
                 </header>
                 <div class="navMenu">
                     <ul>
@@ -44,7 +44,6 @@
                         <li><a href="https://www.w3schools.com/css/css_grid.asp">W3 Schools </a></li>
                         <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Tricks Guide to Grid</a></li>
                         <li><a href="https://www.hongkiat.com/blog/css-grid-layout-fr-unit/">Honkiat Guide to CSS Grid Layout Fr Unit</a></li>
-                        <li></li>
                     </ul>
                 </section>
                 <section class="main-section" id="Grid_Layout">
@@ -70,40 +69,40 @@
                     <p>First thing first - you need to know what you want and need for your required / wanted web page layout.</p>
                     <p>Basic steps to achieve that</p>
                     <ul>
-                        <li><b>Create the layout </b> You can use pen and paper or any design software. You need to make it rough with simple naming, eg. header; main content; sidebar; ads sections; footer and anyting else you need depending on the <b>content</b> you need to present. Make several versions of the design for different type of screens. How would you like it to look on phone/ tablet/ TV.</li>
-                        <li><b>Write your content in HTML </b>Now you need to transfer your content to HTML. Use HTML tags such as <i>main section div</i> as building blocks for your layout. Now use previous naming (header; main content and so on) to declare CSS classes for those blocks. </li>
-                        <li><b>Define your layout items names </b>What I mean by that is you need to define layout item (header; main content and so on) as grid areas. Later you will use those names as areas to set where everything goes inside the grid.</li>
-                        <li><b>Define your grid </b>Once you have your content inside HTML and set the basic naming, define the grid using CSS properties</li>
-                        <li><b>Define the grid container </b> You need to define/style your grid container. Is it the whole page? Is it just part of page? How the items are placed? How much space do they take? Adjust HTML and CSS appropriately.</li>
-                        <li><b>Define grid items </b> Now you need to define/style your <i>grid</i> items. Where are they going to be put inside the grid? How much space they would take inside the grid? Again, adjust HTML and CSS appropriately.</li>
-                        <li><b>Add basic styling</b>Adjust the styling in CSS to make it look closer to the design imagined.</li>
-                        <li><b>MAKE IT RESPONSIVE! </b> Now it is time to make the webpage responsive. Make use of grid flow properties add media queries as necessary.</li>
-                        <li><b>Fine tune the styling and add the magic </b> Let your creative self go! Add all needed or wanted styling and animation!</li>
+                        <li><p><b>Create the layout </b></p> <p>You can use pen and paper or any design software. You need to make it rough with simple naming, eg. header; main content; sidebar; ads sections; footer and anyting else you need depending on the <b>content</b> you need to present. Make several versions of the design for different type of screens. How would you like it to look on phone/ tablet/ TV.</p></li>
+                        <li><p><b>Write your content in HTML </b></p><p>Now you need to transfer your content to HTML. Use HTML tags such as <i>main section div</i> as building blocks for your layout. Now use previous naming (header; main content and so on) to declare CSS classes for those blocks. </p></li>
+                        <li><p><b>Define your layout items names </b></p><p>What I mean by that is you need to define layout item (header; main content and so on) as grid areas. Later you will use those names as areas to set where everything goes inside the grid.</p></li>
+                        <li><p><b>Define your grid </b></p><p>Once you have your content inside HTML and set the basic naming, define the grid using CSS properties</p></li>
+                        <li><p><b>Define the grid container </b></p> <p>You need to define/style your grid container. Is it the whole page? Is it just part of page? How the items are placed? How much space do they take? Adjust HTML and CSS appropriately.</p></li>
+                        <li><p><b>Define grid items </b></p> <p>Now you need to define/style your <i>grid</i> items. Where are they going to be put inside the grid? How much space they would take inside the grid? Again, adjust HTML and CSS appropriately.</p></li>
+                        <li><p><b>Add basic styling</b></p><p>Adjust the styling in CSS to make it look closer to the design imagined.</p></li>
+                        <li><p><b>MAKE IT RESPONSIVE! </b> </p><p>Now it is time to make the webpage responsive. Make use of grid flow properties add media queries as necessary.</p></li>
+                        <li><p><b>Fine tune the styling and add the magic </b></p> Let your creative self go! Add all needed or wanted styling and animation!</li>
                     </ul>
-                    <p>The following sections are presented as  for CSS Grid</p>
+                    <p>The following sections are presented as reference for CSS Grid</p>
                 </section>
                 <section class="main-section" id="_Grid_Elements">
                     <header>
                         <h1> Grid Elements</h1>
                     </header>
-                   <div>
-                    <div>
+                   <div class="sectionFlex">
+                    <div class="textBlock">
                         <p>A grid layout consists of a parent element, with one or more child elements.</p>
                         <pre class="codeSample"><code>
-                                &lt;div class="grid-container">
-                                    &lt;div class="grid-item">One&lt;/div>
-                                    &lt;div class="grid-item">Two&lt;/div>
-                                    &lt;div class="grid-item">Three&lt;/div>
-                                    &lt;div class="grid-item">Four&lt;/div>
-                                    &lt;div class="grid-item">Five&lt;/div>
-                                    &lt;div class="grid-item">Six&lt;/div>
-                                &lt;/div>
-                            </code></pre>
+    &lt;div class="grid-container">
+        &lt;div class="grid-item">One&lt;/div>
+        &lt;div class="grid-item">Two&lt;/div>
+        &lt;div class="grid-item">Three&lt;/div>
+        &lt;div class="grid-item">Four&lt;/div>
+        &lt;div class="grid-item">Five&lt;/div>
+        &lt;div class="grid-item">Six&lt;/div>
+    &lt;/div>
+                </code></pre>
                     </div>
-                    <figure>
+                    <div class="imgBox">
                         <img src="https://assets.hongkiat.com/uploads/css-grid-layout-fr-unit/basic-usage.jpg" alt="Grid example">
                         <!-- https://www.hongkiat.com/blog/css-grid-layout-fr-unit/ -->
-                    </figure>
+                    </div>
                    </div>
                    <div>
                        <p><b>Terminology</b></p>
@@ -144,7 +143,7 @@
                         <p>Defines grid columns and rows using <i>grid-template-row</i> and <i>grid-template-column</i>. Defines the columns and rows of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line. Values inside brackets is the naming of column/row line. Track size accepts these values: <i>length units; auto; minmax(lower value;upper value); repeat(amount; length); min-content; max-content;</i>. Line names can be the same.</p>
                     </div>
                     <div>
-                        <pre><code>
+                        <pre><code class="codeSample">
                             .container {
                                 grid-template-columns: [first] 40px [second] 50px [line3] auto [col4-start] 50px [five] 40px [end];
                                 grid-template-rows: [row1-start] 25% [row1-end] 100px [line3] auto [last-line];
@@ -153,36 +152,37 @@
                     </div>
                     <div>
                         <h3>Template - Areas</h3>
-                        <p><i>grid-template-area.</i> Defines a grid template by referencing the names of the grid areas which are specified with the <i>grid-area</i> property. Repeating the name of a grid area causes the content to span those cells. A period signifies an empty cell. The syntax itself provides a visualization of the structure of the grid</p>
+                        
                     </div>
-                    <div>
-                        <pre><code>
-                            .item-a {
-                                grid-area: header;
-                              }
-                              .item-b {
-                                grid-area: main;
-                              }
-                              .item-c {
-                                grid-area: sidebar;
-                              }
-                              .item-d {
-                                grid-area: footer;
-                              }
-                              
-                              .container {
-                                display: grid;
-                                grid-template-columns: 50px 50px 50px 50px;
-                                grid-template-rows: auto;
-                                grid-template-areas: 
-                                  "header header header header"
-                                  "main main . sidebar"
-                                  "footer footer footer footer";
-                              }
-                        </code></pre>
-                    </div>
-                    <div>
-                        <img src="https://css-tricks.com/wp-content/uploads/2018/11/dddgrid-template-areas.svg" alt="Grid-template-area example">
+                    <div class="sectionFlex">
+                        <div class="textBlock">
+                            <p><i>grid-template-area.</i> Defines a grid template by referencing the names of the grid areas which are specified with the <i>grid-area</i> property. Repeating the name of a grid area causes the content to span those cells. A period signifies an empty cell. The syntax itself provides a visualization of the structure of the grid</p>
+                            <pre><code>
+    .item-a {
+        grid-area: header;
+        }
+        .item-b {
+        grid-area: main;
+        }
+        .item-c {
+        grid-area: sidebar;
+        }
+        .item-d {
+        grid-area: footer;
+        }
+
+        .container {
+        display: grid;
+        grid-template-columns: 50px 50px 50px 50px;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header header header header"
+            "main main . sidebar"
+            "footer footer footer footer";
+        }
+                            </code></pre>
+                        </div>
+                        <div class="imgBox"><img src="https://css-tricks.com/wp-content/uploads/2018/11/dddgrid-template-areas.svg" alt="Grid-template-area example"></div>
                     </div>
                     <div>
                         <h3>Template</h3>
@@ -190,21 +190,21 @@
                     </div>
                     <div>
                         <pre><code>
-                            .container {
-                                grid-template:
-                                  [row1-start] "header header header" 25px [row1-end]
-                                  [row2-start] "footer footer footer" 25px [row2-end]
-                                  / auto 50px auto;
-                              }
-                            is the same as: 
-                            
-                            .container {
-                                grid-template-rows: [row1-start] 25px [row1-end row2-start] 25px [row2-end];
-                                grid-template-columns: auto 50px auto;
-                                grid-template-areas: 
-                                  "header header header" 
-                                  "footer footer footer";
-                              }
+    .container {
+        grid-template:
+            [row1-start] "header header header" 25px [row1-end]
+            [row2-start] "footer footer footer" 25px [row2-end]
+            / auto 50px auto;
+        }
+    is the same as: 
+    
+    .container {
+        grid-template-rows: [row1-start] 25px [row1-end row2-start] 25px [row2-end];
+        grid-template-columns: auto 50px auto;
+        grid-template-areas: 
+            "header header header" 
+            "footer footer footer";
+        }
                         </code></pre>
                     </div>
                     <div>
@@ -213,21 +213,21 @@
                     </div>
                     <div>
                         <pre><code>
-                            .container {
-                                grid-template:
-                                  [row1-start] "header header header" 25px [row1-end]
-                                  [row2-start] "footer footer footer" 25px [row2-end]
-                                  / auto 50px auto;
-                              }
-                            is the same as: 
-                            
-                            .container {
-                                grid-template-rows: [row1-start] 25px [row1-end row2-start] 25px [row2-end];
-                                grid-template-columns: auto 50px auto;
-                                grid-template-areas: 
-                                  "header header header" 
-                                  "footer footer footer";
-                              }
+    .container {
+        grid-template:
+            [row1-start] "header header header" 25px [row1-end]
+            [row2-start] "footer footer footer" 25px [row2-end]
+            / auto 50px auto;
+        }
+    is the same as: 
+    
+    .container {
+        grid-template-rows: [row1-start] 25px [row1-end row2-start] 25px [row2-end];
+        grid-template-columns: auto 50px auto;
+        grid-template-areas: 
+            "header header header" 
+            "footer footer footer";
+        }
                         </code></pre>
                     </div>
                 <div>
@@ -236,20 +236,20 @@
                 </div>
                 <div>
                     <pre><code>
-                        .container {
-                            grid: [row1-start] "header header header" 1fr [row1-end]
-                                  [row2-start] "footer footer footer" 25px [row2-end]
-                                  / auto 50px auto;
-                          }
-                        is the same as: 
-                        
-                        .container {
-                            grid-template-areas: 
-                              "header header header"
-                              "footer footer footer";
-                            grid-template-rows: [row1-start] 1fr [row1-end row2-start] 25px [row2-end];
-                            grid-template-columns: auto 50px auto;    
-                          }
+    .container {
+        grid: [row1-start] "header header header" 1fr [row1-end]
+                [row2-start] "footer footer footer" 25px [row2-end]
+                / auto 50px auto;
+        }
+    is the same as: 
+    
+    .container {
+        grid-template-areas: 
+            "header header header"
+            "footer footer footer";
+        grid-template-rows: [row1-start] 1fr [row1-end row2-start] 25px [row2-end];
+        grid-template-columns: auto 50px auto;    
+        }
                     </code></pre>
                 </div>
                 </section>
@@ -272,17 +272,17 @@
                     </div>
                     <div>
                         <pre><code>
-                            .container {
-                                align-content: start | end | center | stretch | space-around | space-between | space-evenly;    
-                              }
-                            
-                            .container {
-                                justify-content: start | end | center | stretch | space-around | space-between | space-evenly;    
-                              }
-                              
-                            .container {
-                                place-content: align-content / justify-content;
-                              }  
+    .container {
+        align-content: start | end | center | stretch | space-around | space-between | space-evenly;    
+        }
+    
+    .container {
+        justify-content: start | end | center | stretch | space-around | space-between | space-evenly;    
+        }
+        
+    .container {
+        place-content: align-content / justify-content;
+        }  
                         </code></pre>
                     </div>
                     <div>
@@ -291,17 +291,17 @@
                     </div>
                     <div>
                         <pre><code>
-                            .container {
-                                align-items: start | end | center | stretch ;    
-                              }
-                            
-                            .container {
-                                justify-items: start | end | center | stretch ;    
-                              }
-                              
-                            .container {
-                                place-items: align-item / justify-item;
-                              }  
+    .container {
+        align-items: start | end | center | stretch ;    
+        }
+    
+    .container {
+        justify-items: start | end | center | stretch ;    
+        }
+        
+    .container {
+        place-items: align-item / justify-item;
+        }  
                         </code></pre>
                     </div>
                 </section>
@@ -315,12 +315,12 @@
                     </div>
                     <div>
                         <pre><code>
-                            .item {
-                                grid-column-start: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
-                                grid-column-end: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
-                                grid-row-start: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
-                                grid-row-end: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
-                                } 
+    .item {
+        grid-column-start: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
+        grid-column-end: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
+        grid-row-start: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
+        grid-row-end: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
+        } 
                         </code></pre>
                     </div>
                     <div>
@@ -329,10 +329,10 @@
                     </div>
                     <div>
                         <pre><code>
-                            .item {
-                                grid-column: &lt;start-line> / &lt;end-line> | &lt;start-line> / span &lt;value>;
-                                grid-row: &lt;start-line> / &lt;end-line> | &lt;start-line> / span &lt;value>;
-                              } 
+    .item {
+        grid-column: &lt;start-line> / &lt;end-line> | &lt;start-line> / span &lt;value>;
+        grid-row: &lt;start-line> / &lt;end-line> | &lt;start-line> / span &lt;value>;
+        } 
                         </code></pre>
                     </div>
                     <div>
@@ -341,9 +341,9 @@
                     </div>
                     <div>
                         <pre><code>
-                            .item {
-                                grid-area: &lt;name> | &lt;row-start> / &lt;column-start> / &lt;row-end> / &lt;column-end>;
-                              }
+    .item {
+        grid-area: &lt;name> | &lt;row-start> / &lt;column-start> / &lt;row-end> / &lt;column-end>;
+        }
                         </code></pre>
                     </div>
                 </section>
@@ -357,17 +357,17 @@
                     </div>
                     <div>
                         <pre><code>
-                            .item {
-                                align-self: start | end | center | stretch ;    
-                              }
-                            
-                            .item {
-                                justify-self: start | end | center | stretch ;    
-                              }
-                              
-                            .item {
-                                place-self: align-self / justify-self;
-                              }  
+    .item {
+        align-self: start | end | center | stretch ;    
+        }
+    
+    .item {
+        justify-self: start | end | center | stretch ;    
+        }
+        
+    .item {
+        place-self: align-self / justify-self;
+        }  
                         </code></pre>
                     </div>
                 </section>
