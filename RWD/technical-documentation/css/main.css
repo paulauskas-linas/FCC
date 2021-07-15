@@ -14,6 +14,15 @@ html {
 body {
     font-family: "Hind Siliguri", sans-serif;
     font-size: 1em;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Grid area declarations. Grid area property assigns name to item  */
@@ -53,18 +62,39 @@ body {
 }
 
 .navMenu > ul > li {
-    padding: 0.3em;
+    padding: 0.35em;
     margin: 0.1em 0;
     height: 100%;
     width: 100%;
     border-radius: 0.3em;
 }
+/* Navigation styling, animation  */
 
 .navMenu > ul > li > a {
-    display: block;
     text-decoration: none;
-    border-radius: 0.1em;
     text-transform: uppercase;
+    transition: 0.5s;
+    display: inline-block;
+	position: relative;
+}
+
+.navMenu > ul > li > a:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 2px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-image .5s ease;
+}
+
+.navMenu > ul > li > a:hover:after {
+	width: 100%;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.navMenu > ul > li > a:hover {
+    font-weight: bold;
 }
 
 .nav-link, .nav-link:visited  {
@@ -83,8 +113,12 @@ body {
 .mainContent {
     grid-column: 2;
     padding-left: 2em;
+    padding-top: 1em;
 }
 
+.main-section {
+    padding-bottom: 5em;
+}
 .sectionFlex {
     display: flex;
     flex-direction: row;
@@ -100,13 +134,25 @@ body {
 
 .imgBox {
     width: 65%;
-    /* overflow: hidden; */
 }
 
 .textBlock {
     display: block;
     width: 50%;
 }
+
+h3 {
+    padding-bottom: 0.5em;
+}
+
+/* Style for hr line */
+hr {
+    margin-top: 2em;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
 /* Code samples */
 .codeSample {
     display: block;
