@@ -13,16 +13,15 @@ html {
 
 body {
     font-family: "Hind Siliguri", sans-serif;
-    font-size: 1em;
-    position: relative;
+    font-size: 1rem;
 }
 
 ul {
-    list-style: none;
+    padding-left: 1.5em;
 }
 
-a {
-    text-decoration: none;
+p { 
+    text-align: justify;
 }
 
 /* Grid area declarations. Grid area property assigns name to item  */
@@ -32,25 +31,26 @@ a {
 /* Grid container declarations. Set grid, layout, sizes.  */
 .containerGrid {
     display: grid; 
-    grid-template-columns: minmax(350px, auto) 1fr;
+    grid-template-columns: 30% 1fr;
     grid-template-areas: "sidebar mainContent";
+    height: 100vh;
     padding: 0 2vw 0 2vw;
-    gap: 0 2em;
+    gap: 0 2rem;
 
 }
-/* Sidebar lock to top and left */
+/* Sidebar lock */
 .sideBar {
     position: fixed;
 }
 
 /* Sidebar styling */
 .sideBar {
-    display: block;
     grid-column: 1;
     background-color: rgb(245, 245, 245);
     padding: 1em;
     border-radius: 0 0.4em 0.4em 0;
     height: 100%;
+    width: 30%;
     box-shadow: 0.3em 0.9em 10px rgb(179, 180, 180);
 }
 
@@ -58,7 +58,8 @@ a {
     display: flex;
     flex-direction: column;
     list-style: none;
-    width: 100%;
+    /* width: 100%; */
+    padding-left: 0;
 }
 
 .navMenu > ul > li {
@@ -73,7 +74,7 @@ a {
 .navMenu > ul > li > a {
     text-decoration: none;
     text-transform: uppercase;
-    transition: 0.5s;
+    transition: 0.2s;
     display: inline-block;
 	position: relative;
 }
@@ -85,7 +86,7 @@ a {
 	height: 2px;
 	width: 0px;
 	background: transparent;
-	transition: width .5s ease, background-image .5s ease;
+	transition: width .2s ease, background-image .2s ease;
 }
 
 .navMenu > ul > li > a:hover:after {
@@ -114,14 +115,19 @@ a {
     grid-column: 2;
     padding-left: 2em;
     padding-top: 1em;
+    overflow: auto;
 }
 
 .main-section {
     padding-bottom: 5em;
 }
+#Grid_Layout > p > p > ul {
+    list-style: circle !important;
+} 
 .sectionFlex {
     display: flex;
     flex-direction: row;
+    margin: auto;
 }
 
 .imgBox > img {
@@ -140,7 +146,9 @@ a {
     display: block;
     width: 50%;
 }
-
+.codeBlock {
+    width: 50%;
+}
 h3 {
     padding-bottom: 0.5em;
 }
@@ -163,4 +171,64 @@ hr {
 
 pre {
     white-space: pre-wrap;
+}
+
+/* links styling */
+.linkResource {
+    color: black;
+}
+.linkResource:hover {
+    color: rgb(153, 152, 152);
+    font-weight: 700;
+    text-decoration: underline;
+}
+.linkResource:focus {
+    color: rgb(153, 152, 152);
+    font-weight: 700;
+    text-decoration: underline;
+}
+.linkResource::after {
+    content: "  (Opens in new tab)";
+    font-style: italic;
+    font-size: calc(initial - 10%);
+    display: none;
+}
+
+.linkResource:hover::after {
+    display: inline;
+}
+
+.sectionTitle {
+    color:black;
+}
+
+.sectionTitle:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(153, 152, 152);
+}
+.sectionTitle::after {
+    content: "  #";
+    font-style: italic;
+    display: none;
+    color: rgb(153, 152, 152);;
+}
+
+.sectionTitle:hover::after {
+    display: inline-block;
+}
+
+/* back to top  */
+.backTotop > a > img {
+    width: 100%;
+}
+
+.backTotop {
+    width: 50px;
+    position: absolute;
+    top: 90vh;
+    right: 5vw;
+}
+
+.backTotop:hover {
+    transform: scale(1.2);
 }
