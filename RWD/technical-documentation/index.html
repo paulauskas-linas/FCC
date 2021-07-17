@@ -14,6 +14,7 @@
                 <header><h1><a class="nav-link-home" href="#Intro">CSS Grid Short Guide</a></h1>
                 </header>
                 <div class="navMenu">
+                    <button class="menu-btn">Menu</button>
                     <ul>
                         <li><a class="nav-link" href="#Intro">Intro</a></li>
                         <li><a class="nav-link" href="#Grid_Layout">Grid Layout</a></li>
@@ -90,7 +91,7 @@
                    <div class="sectionFlex">
                     <div class="textBlock">
                         <p>A grid layout consists of a parent element, with one or more child elements.</p>
-                        <pre class="codeSample"><code>
+                        <code class="codeSample">
     &lt;div class="grid-container">
         &lt;div class="grid-item">1.&lt;/div>
         &lt;div class="grid-item">2.&lt;/div>
@@ -99,7 +100,7 @@
         &lt;div class="grid-item">5.&lt;/div>
         &lt;div class="grid-item">6.&lt;/div>
     &lt;/div>
-                </code></pre>
+                </code>
                     </div>
                     <div class="imgBox">
                         <img src="https://assets.hongkiat.com/uploads/css-grid-layout-fr-unit/basic-usage.jpg" alt="Grid example">
@@ -127,14 +128,14 @@
                             <p>An HTML element becomes a grid container when its display property is set to <i>grid</i> or <i>inline-grid</i>.</p>
                         </div>
                         <div class="codeBlock">
-                        <pre><code>
-                            .container {
-                                display: grid;
-                              }
-                              .container {
-                                display: inline-grid;
-                              }
-                        </code></pre>
+                        <code class="codeSample">
+    .container {
+        display: grid;
+        }
+        .container {
+        display: inline-grid;
+        }
+                        </code>
                         </div>
                     </div>
                    <hr>
@@ -143,26 +144,26 @@
                     <header>
                         <h1><a class="sectionTitle" href="#Grid_Template_Explicit">Grid Template Explicit</a></h1>
                     </header>
-                    <div>
-                        <h3>Rows and Columns</h3>
-                        <p>Defines grid columns and rows using <i>grid-template-row</i> and <i>grid-template-column</i>. Defines the columns and rows of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line. Values inside brackets is the naming of column/row line. Track size accepts these values: <i>length units; auto; minmax(lower value;upper value); repeat(amount; length); min-content; max-content;</i>. Line names can be the same.</p>
-                    </div>
-                    <div>
-                        <pre><code class="codeSample">
-                            .container {
-                                grid-template-columns: [first] 40px [second] 50px [line3] auto [col4-start] 50px [five] 40px [end];
-                                grid-template-rows: [row1-start] 25% [row1-end] 100px [line3] auto [last-line];
-                            }
-                        </code></pre>
-                    </div>
-                    <div>
-                        <h3>Template - Areas</h3>
-                        
+                    <div class="sectionFlex">
+                        <div class="textBlock">
+                            <h3>Rows and Columns</h3>
+                            <p>Defines grid columns and rows using <i>grid-template-row</i> and <i>grid-template-column</i>. Defines the columns and rows of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line. Values inside brackets is the naming of column/row line. Track size accepts these values: <i>length units; auto; minmax(lower value;upper value); repeat(amount; length); min-content; max-content;</i>. Line names can be the same.</p>
+                        </div>
+                        <div class="codeBlock" >
+                            <code class="codeSample">
+    .container {
+        grid-template-columns: [first] 40px [second] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+        grid-template-rows: [row1-start] 25% [row1-end] 100px [line3] auto [last-line];
+    }
+                            </code>
+                        </div>
                     </div>
                     <div class="sectionFlex">
                         <div class="textBlock">
+                            <h3>Template - Areas</h3>
                             <p><i>grid-template-area.</i> Defines a grid template by referencing the names of the grid areas which are specified with the <i>grid-area</i> property. Repeating the name of a grid area causes the content to span those cells. A period signifies an empty cell. The syntax itself provides a visualization of the structure of the grid</p>
-                            <pre><code>
+                            <div class="codeBlockSmaller">
+                                <code class="codeSample">
     .item-a {
         grid-area: header;
         }
@@ -176,7 +177,7 @@
         grid-area: footer;
         }
 
-        .container {
+    .container {
         display: grid;
         grid-template-columns: 50px 50px 50px 50px;
         grid-template-rows: auto;
@@ -185,16 +186,18 @@
             "main main . sidebar"
             "footer footer footer footer";
         }
-                            </code></pre>
+                                </code>
+                            </div>
                         </div>
                         <div class="imgBox"><img src="https://css-tricks.com/wp-content/uploads/2018/11/dddgrid-template-areas.svg" alt="Grid-template-area example"></div>
                     </div>
-                    <div>
-                        <h3>Template</h3>
-                        <p><i>grid-template</i> is a shorthand for setting <i>grid-template-rows</i>, <i>grid-template-columns</i>, and <i>grid-template-areas</i> in a single declaration</p>
-                    </div>
-                    <div>
-                        <pre><code>
+                    <div class="sectionFlex">
+                        <div class="textBlock">
+                            <h3>Template</h3>
+                            <p><i>grid-template</i> is a shorthand for setting <i>grid-template-rows</i>, <i>grid-template-columns</i>, and <i>grid-template-areas</i> in a single declaration</p>
+                        </div>
+                        <div class="codeBlock">
+                            <code class="codeSample">
     .container {
         grid-template:
             [row1-start] "header header header" 25px [row1-end]
@@ -210,14 +213,16 @@
             "header header header" 
             "footer footer footer";
         }
-                        </code></pre>
+                            </code>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Gaps</h3>
-                        <p><i>row-gap</i>, <i>column-gap</i> and their's shorthand <i>gap</i> determines the size of the grid lines or in other words width between of the gutters between the columns/rows. <i>The gutters are created only between columns/row not on the outer edges</i></p>
-                    </div>
-                    <div>
-                        <pre><code>
+                    <div class="sectionFlex">
+                        <div class="textBlock">
+                            <h3>Gaps</h3>
+                            <p><i>row-gap</i>, <i>column-gap</i> and their's shorthand <i>gap</i> determines the size of the grid lines or in other words width between of the gutters between the columns/rows. <i>The gutters are created only between columns/row not on the outer edges</i></p>
+                        </div>
+                        <div class="codeBlock">
+                            <code class="codeSample">
     .container {
         grid-template:
             [row1-start] "header header header" 25px [row1-end]
@@ -233,18 +238,20 @@
             "header header header" 
             "footer footer footer";
         }
-                        </code></pre>
+                            </code>
+                        </div>
                     </div>
-                <div>
-                    <h3>Grid shorthand</h3>
-                    <p>A shorthand for setting all of the following properties in a single declaration: <i>grid-template-rows</i>, <i>grid-template-columns</i>, <i>grid-template-areas</i>, <i>grid-auto-rows</i>, <i>grid-auto-columns</i>, and <i>grid-auto-flow</i> (Note: You can only specify the explicit or the implicit grid properties in a single <i>grid</i> declaration). </p>
-                </div>
-                <div>
-                    <pre><code>
+                <div class="sectionFlex">
+                    <div class="textBlock">
+                        <h3>Grid shorthand</h3>
+                        <p>A shorthand for setting all of the following properties in a single declaration: <i>grid-template-rows</i>, <i>grid-template-columns</i>, <i>grid-template-areas</i>, <i>grid-auto-rows</i>, <i>grid-auto-columns</i>, and <i>grid-auto-flow</i> (Note: You can only specify the explicit or the implicit grid properties in a single <i>grid</i> declaration). </p>
+                    </div>
+                    <div class="codeBlock">
+                        <code class="codeSample">
     .container {
         grid: [row1-start] "header header header" 1fr [row1-end]
-                [row2-start] "footer footer footer" 25px [row2-end]
-                / auto 50px auto;
+[row2-start] "footer footer footer" 25px [row2-end]
+/ auto 50px auto;
         }
     is the same as: 
     
@@ -255,7 +262,8 @@
         grid-template-rows: [row1-start] 1fr [row1-end row2-start] 25px [row2-end];
         grid-template-columns: auto 50px auto;    
         }
-                    </code></pre>
+                        </code>
+                    </div>
                 </div>
                 <hr>
                 </section>
@@ -273,12 +281,13 @@
                     <header>
                         <h1><a class="sectionTitle" href="#Grid_Justification_and_Alignment">Grid Justification and Alignment</a></h1>
                     </header>
-                    <div>
-                        <h3>Content</h3>
-                        <p>You can align (<i>along horizontal axis of grid container</i>), justify (<i>along vertical axis of grid container</i>)  (shorthand for both <i>place</i>) the whole grid within grid container.</p>
-                    </div>
-                    <div>
-                        <pre><code>
+                    <div class="sectionFlex">
+                        <div class="textBlock">
+                            <h3>Content</h3>
+                            <p>You can align (<i>along horizontal axis of grid container</i>), justify (<i>along vertical axis of grid container</i>)  (shorthand for both <i>place</i>) the whole grid within grid container.</p>
+                        </div>
+                        <div class="codeBlock">
+                            <code class="codeSample">
     .container {
         align-content: start | end | center | stretch | space-around | space-between | space-evenly;    
         }
@@ -289,15 +298,17 @@
         
     .container {
         place-content: align-content / justify-content;
-        }  
-                        </code></pre>
+        }
+                            </code>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Items</h3>
-                        <p>You can align (<i>along horizontal axis of grid track</i>), justify (<i>along vertical axis of grid track</i>)  (shorthand for both is <i>place</i>) the grid items within grid container.</p>
-                    </div>
-                    <div>
-                        <pre><code>
+                    <div class="sectionFlex">
+                        <div class="textBlock">
+                            <h3>Items</h3>
+                            <p>You can align (<i>along horizontal axis of grid track</i>), justify (<i>along vertical axis of grid track</i>)  (shorthand for both is <i>place</i>) the grid items within grid container.</p>
+                        </div>
+                        <div class="codeBlock">
+                            <code class="codeSample">
     .container {
         align-items: start | end | center | stretch ;    
         }
@@ -308,8 +319,9 @@
         
     .container {
         place-items: align-item / justify-item;
-        }  
-                        </code></pre>
+        }
+                            </code>
+                        </div>
                     </div>
                     <hr>
                 </section>
@@ -317,42 +329,48 @@
                     <header>
                         <h1><a class="sectionTitle" href="#Grid_Items_Positioning">Grid Items Positioning</a></h1>
                     </header>
-                    <div>
-                        <h3>Items start | end with column/row start | end</h3>
-                        <p><i>grid-column-start</i> <i>grid-column-end</i> <i>grid-row-start</i> <i>grid-row-end</i> Determines a grid item’s location within the grid by referring to specific grid lines.</p>
-                    </div>
-                    <div>
-                        <pre><code>
+                    <div class="sectionFlex">
+                        <div class="textBlock">
+                            <h3>Items start | end with column/row start | end</h3>
+                            <p><i>grid-column-start</i> <i>grid-column-end</i> <i>grid-row-start</i> <i>grid-row-end</i> Determines a grid item’s location within the grid by referring to specific grid lines.</p>
+                        </div>
+                        <div class="codeBlock">
+                            <code class="codeSample">
     .item {
         grid-column-start: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
         grid-column-end: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
         grid-row-start: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
         grid-row-end: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
-        } 
-                        </code></pre>
+        }
+                            </code>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Items start | end with column/row shorthand </h3>
-                        <p><i>grid-column</i> and grid-row is a shorthand for <i>grid-column-start</i> + <i>grid-column-end</i>, and <i>grid-row-start</i> + <i>grid-row-end</i>, respectively</p>
-                    </div>
-                    <div>
-                        <pre><code>
+                    <div class="sectionFlex">
+                        <div class="textBlock">
+                            <h3>Items start | end with column/row shorthand </h3>
+                            <p><i>grid-column</i> and grid-row is a shorthand for <i>grid-column-start</i> + <i>grid-column-end</i>, and <i>grid-row-start</i> + <i>grid-row-end</i>, respectively</p>
+                        </div>
+                        <div class="codeBlock">
+                            <code class="codeSample">
     .item {
         grid-column: &lt;start-line> / &lt;end-line> | &lt;start-line> / span &lt;value>;
         grid-row: &lt;start-line> / &lt;end-line> | &lt;start-line> / span &lt;value>;
-        } 
-                        </code></pre>
+        }
+                            </code>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Items positioning with grid area </h3>
-                        <p>Gives an item a name so that it can be d by a template created with the g<i>rid-template-areas</i> property. Alternatively, this property can be used as an even shorter shorthand for <i>grid-row-start</i> + <i>grid-column-start</i> + <i>grid-row-end</i> + <i>grid-column-end</i>.</p>
-                    </div>
-                    <div>
-                        <pre><code>
+                    <div class="sectionFlex">
+                        <div class="textBlock">
+                            <h3>Items positioning with grid area </h3>
+                            <p>Gives an item a name so that it can be d by a template created with the g<i>rid-template-areas</i> property. Alternatively, this property can be used as an even shorter shorthand for <i>grid-row-start</i> + <i>grid-column-start</i> + <i>grid-row-end</i> + <i>grid-column-end</i>.</p>
+                        </div>
+                        <div class="codeBlock">
+                            <code class="codeSample">
     .item {
         grid-area: &lt;name> | &lt;row-start> / &lt;column-start> / &lt;row-end> / &lt;column-end>;
         }
-                        </code></pre>
+                            </code>
+                        </div>
                     </div>
                 </section>
                 <hr>
@@ -360,12 +378,13 @@
                     <header>
                         <h1><a class="sectionTitle" href="#Grid_Items_Justification_and_Alignment">Grid Items Justification and Alignment</a></h1>
                     </header>
-                    <div>
-                        <h3>Items</h3>
-                        <p>You can align (<i>along horizontal axis of grid cell</i>), justify (<i>along vertical axis of the grid cell</i>)  (shorthand for both is <i>place</i>) the grid item within the grid cell.</p>
-                    </div>
-                    <div>
-                        <pre><code>
+                    <div class="sectionFlex">
+                        <div class="textBlock">
+                            <h3>Items</h3>
+                            <p>You can align (<i>along horizontal axis of grid cell</i>), justify (<i>along vertical axis of the grid cell</i>)  (shorthand for both is <i>place</i>) the grid item within the grid cell.</p>
+                        </div>
+                        <div class="codeBlock">
+                            <code class="codeSample">
     .item {
         align-self: start | end | center | stretch ;    
         }
@@ -376,8 +395,9 @@
         
     .item {
         place-self: align-self / justify-self;
-        }  
-                        </code></pre>
+        }
+                            </code>
+                        </div>
                     </div>
                     <hr>
                 </section>

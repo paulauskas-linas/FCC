@@ -31,7 +31,7 @@ p {
 /* Grid container declarations. Set grid, layout, sizes.  */
 .containerGrid {
     display: grid; 
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: 25% 1fr;
     grid-template-areas: "sidebar mainContent";
     height: 100vh;
     padding: 0 2vw 0 2vw;
@@ -50,8 +50,11 @@ p {
     padding: 1em;
     border-radius: 0 0.4em 0.4em 0;
     height: 100%;
-    width: 30%;
+    width: 25%;
     box-shadow: 0.3em 0.9em 10px rgb(179, 180, 180);
+}
+.navMenu {
+    display: flex;
 }
 
 .navMenu > ul {
@@ -110,6 +113,94 @@ p {
     color: black;
 }
 
+.navMenu button {
+    display: none;
+    font-family: inherit;
+    background: none;
+    text-decoration: none;
+    border: none;
+    color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0 1.5rem;
+    padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .navMenu button {
+        display: flex;
+        font-family: inherit;
+        background: none;
+        text-decoration: none;
+        border: none;
+        color: inherit;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 0 1.5rem;
+        padding: 0;
+    }
+    .navMenu {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border: none;
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navMenu ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        list-style: none;
+        height: auto;
+        /* width: 100%; */
+        margin: 2rem 0;
+        padding: 0;
+        font-size: 1.2rem;
+        border-radius: 50px!important;
+        opacity: 0;
+        /* pointer-events: none; */
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.4s ease;  
+    }
+    .navMenu li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: #b6b4b4;
+        margin: 0;
+        border-radius: 20px;
+        overflow: visible;
+    }
+    .navMenu li:hover {
+        background-color: #d4d4d4;
+    }
+    .navMenu button:focus + ul {
+        opacity: 1;
+        /* pointer-events: all; */
+        transform: translateY(0px);
+        visibility: visible;
+      }
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    h1::before { 
+        display: block; 
+        content: " "; 
+        margin-top: -3rem; 
+        height: 3rem; 
+        visibility: hidden; 
+        pointer-events: none;
+      }
+    }
 /* Main content styling */
 .mainContent {
     grid-column: 2;
@@ -119,7 +210,7 @@ p {
 }
 
 .main-section {
-    padding-bottom: 5em;
+    padding-bottom: 2em;
 }
 #Grid_Layout > p > p > ul {
     list-style: circle !important;
@@ -127,7 +218,6 @@ p {
 .sectionFlex {
     display: flex;
     flex-direction: row;
-    margin: auto;
 }
 
 .imgBox > img {
@@ -135,22 +225,55 @@ p {
     max-width: 100%;
     object-fit: cover;
     height: auto;
-    border-radius: 0.1px;
+    padding-left: 1rem;
 }
 
 .imgBox {
-    width: 65%;
+    width: 50%;
 }
 
 .textBlock {
-    display: block;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 50%;
+    padding-bottom: 1rem;
 }
 .codeBlock {
+    display: flex;
     width: 50%;
+    text-align: left;
+    align-items: center;
+    justify-items: center;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
 }
+.codeBlockSmaller {
+    display: flex;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    justify-items: center;
+    padding-left: 1rem;
+}
+/* Code samples */
+.codeSample {
+    display: block;
+    text-align: left;
+    width: max-content;
+    white-space: pre-wrap;
+    background-color: rgb(220, 220, 220);
+    border-radius: 0.5rem;
+}
+
+pre {
+    display: inline;
+    
+    height: 100%;
+}
+
 h3 {
-    padding-bottom: 0.5em;
+    padding-bottom: 0.5rem;
 }
 
 /* Style for hr line */
@@ -159,18 +282,6 @@ hr {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
-
-/* Code samples */
-.codeSample {
-    display: block;
-    text-align: left;
-    overflow-wrap: break-word;
-    width: 100%;
-}
-
-pre {
-    white-space: pre-wrap;
 }
 
 /* links styling */
@@ -231,4 +342,37 @@ pre {
 
 .backTotop:hover {
     transform: scale(1.2);
+}
+
+@media screen and (max-width: 800px) { 
+    .containerGrid {
+        grid-template-columns: 1fr;
+        grid-template-areas: "sidebar" "mainContent";
+        gap: 2rem;
+
+    }
+    .sideBar {
+        grid-row: 1;
+        grid-column: unset;
+        height: max-content;
+        width: 100%;
+    }
+
+    .mainContent {
+        grid-row: 2;
+        grid-column: unset;
+        padding-top: 3rem;
+    }
+    .main-section {
+        top: 10rem;
+    }
+    .sectionFlex {
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .imgBox, .textBlock, .codeBlock {
+        width: 80%;
+    }
 }
