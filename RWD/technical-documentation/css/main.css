@@ -5,7 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+} 
 
 html {
     scroll-behavior: smooth;
@@ -38,21 +38,26 @@ p {
     gap: 0 2rem;
 
 }
-/* Sidebar lock */
+/* Sidebar lock, styling */
 .sideBar {
     position: fixed;
-}
-
-/* Sidebar styling */
-.sideBar {
     grid-column: 1;
     background-color: rgb(245, 245, 245);
-    padding: 1em;
+    padding: 1rem;
     border-radius: 0 0.4em 0.4em 0;
     height: 100%;
     width: 25%;
     box-shadow: 0.3em 0.9em 10px rgb(179, 180, 180);
 }
+
+@media screen and (max-width: 800px) {
+    .sideBar {
+        border-radius: 0 0 0.4em 0.4em;
+        margin-right: 1rem;
+        width: 100%;
+    }
+}
+/* NAVIGATION STYLING */
 .navMenu {
     display: flex;
 }
@@ -61,7 +66,6 @@ p {
     display: flex;
     flex-direction: column;
     list-style: none;
-    /* width: 100%; */
     padding-left: 0;
 }
 
@@ -70,9 +74,7 @@ p {
     margin: 0.1em 0;
     height: 100%;
     width: 100%;
-    border-radius: 0.3em;
 }
-/* Navigation styling, animation  */
 
 .navMenu > ul > li > a {
     text-decoration: none;
@@ -82,6 +84,7 @@ p {
 	position: relative;
 }
 
+/* UNDERLINE ANIMATION START */
 .navMenu > ul > li > a:after {
 	content: '';
 	display: block;
@@ -100,19 +103,21 @@ p {
 .navMenu > ul > li > a:hover {
     font-weight: bold;
 }
-
+ /* UNDERLINE ANIMATION END  */
 .nav-link, .nav-link:visited  {
     color: black;
 }
 
 .nav-link-home {
     text-decoration: none;
+    color: black;
 }
 
 .nav-link-home:visited {
     color: black;
 }
 
+/* NAVIGATION DROPDOWN MENU. NOT VISIBLE ON DESKTOP */
 .navMenu button {
     display: none;
     font-family: inherit;
@@ -125,6 +130,7 @@ p {
     margin: 0 1.5rem;
     padding: 0;
 }
+/* AT MEDIA PROPERTIES TO SET SIDEBAR AS TOP WITH DROPDOWN MENU */
 
 @media screen and (max-width: 800px) {
     .navMenu button {
@@ -142,7 +148,7 @@ p {
     }
     .navMenu {
         position: relative;
-        margin: 0;
+        margin: 0 1rem 0 0;
         padding: 0;
         border: none;
         width: 50%;
@@ -157,13 +163,11 @@ p {
         align-items: flex-end;
         list-style: none;
         height: auto;
-        /* width: 100%; */
         margin: 2rem 0;
         padding: 0;
         font-size: 1.2rem;
         border-radius: 50px!important;
         opacity: 0;
-        /* pointer-events: none; */
         visibility: hidden;
         transform: translateY(-10px);
         transition: all 0.4s ease;  
@@ -184,7 +188,6 @@ p {
     }
     .navMenu button:focus + ul {
         opacity: 1;
-        /* pointer-events: all; */
         transform: translateY(0px);
         visibility: visible;
       }
@@ -192,7 +195,8 @@ p {
         display: flex;
         justify-content: space-between;
     }
-    h1::before { 
+    /* ADDS SPACE BEFORE SECTION HEADINGS TO ACCOMODATE HEADER WHILE USING SIDEMENU LINKS */
+    h1::before {  
         display: block; 
         content: " "; 
         margin-top: -3rem; 
@@ -321,7 +325,7 @@ hr {
     content: "  #";
     font-style: italic;
     display: none;
-    color: rgb(153, 152, 152);;
+    color: rgb(153, 152, 152);
 }
 
 .sectionTitle:hover::after {

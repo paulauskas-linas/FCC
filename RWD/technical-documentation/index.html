@@ -51,7 +51,7 @@
                     <header>
                         <h1><a class="sectionTitle" href="#Grid_Layout">Grid Layout</a></h1>
                     </header>
-                    <p>Grid Layout controls the layout of its content through the use of a <i>grid</i>: an intersecting set of horizontal and vertical lines which create a sizing and positioning coordinate system for the grid container’s contents. 
+                    <p>Grid Layout controls the layout of its content through the use of a <i>grid</i>: an intersecting set of horizontal and vertical lines which create a sizing and positioning coordinate system for the grid container’s contents.</p>
                         <p>Grid Layout features</p>
                             <ul>
                                 <li>fixed, flexible, and content-based track sizing functions</li>
@@ -61,7 +61,6 @@
                                 <li>the ability to overlap content and control layering with z-index</li>
                             </ul>
                             <p>Grid containers can be nested or mixed with flex containers as necessary to create more complex layouts</p>
-                        </p>
                         <hr>
                 </section>
                 <section class="main-section" id="Grid_Design">
@@ -71,15 +70,15 @@
                     <p>First thing first - you need to know what you want and need for your required / wanted web page layout.</p>
                     <p>Basic steps to achieve that</p>
                     <ul>
-                        <li><p><h4><b>Create the layout </b></h4></p> <p>You can use pen and paper or any design software. You need to make it rough with simple naming, eg. header; main content; sidebar; ads sections; footer and anyting else you need depending on the <b>content</b> you need to present. Make several versions of the design for different type of screens. How would you like it to look on phone/ tablet/ TV.</p></li>
-                        <li><p><h4><b>Write your content in HTML </b></h4></p><p>Now you need to transfer your content to HTML. Use HTML tags such as <i>main section div</i> as building blocks for your layout. Now use previous naming (header; main content and so on) to declare CSS classes for those blocks. </p></li>
-                        <li><p><h4><b>Define your layout items names </b></h4></p><p>What I mean by that is you need to define layout item (header; main content and so on) as grid areas. Later you will use those names as areas to set where everything goes inside the grid.</p></li>
-                        <li><p><h4><b>Define your grid </b></h4></p><p>Once you have your content inside HTML and set the basic naming, define the grid using CSS properties</p></li>
-                        <li><p><h4><b>Define the grid container </b></h4></p> <p>You need to define/style your grid container. Is it the whole page? Is it just part of page? How the items are placed? How much space do they take? Adjust HTML and CSS appropriately.</p></li>
-                        <li><p><h4><b>Define grid items </b></h4></p> <p>Now you need to define/style your <i>grid</i> items. Where are they going to be put inside the grid? How much space they would take inside the grid? Again, adjust HTML and CSS appropriately.</p></li>
-                        <li><p><h4><b>Add basic styling</b></h4></p><p>Adjust the styling in CSS to make it look closer to the design imagined.</p></li>
-                        <li><p><h4><b>MAKE IT RESPONSIVE!</b></h4></p><p>Now it is time to make the webpage responsive. Make use of grid flow properties add media queries as necessary.</p></li>
-                        <li><p><h4><b>Fine tune the styling and add the magic</b></h4></p> Let your creative self go! Add all needed or wanted styling and animation!</li>
+                        <li><h4><b>Create the layout </b></h4><p>You can use pen and paper or any design software. You need to make it rough with simple naming, eg. header; main content; sidebar; ads sections; footer and anyting else you need depending on the <b>content</b> you need to present. Make several versions of the design for different type of screens. How would you like it to look on phone/ tablet/ TV.</p></li>
+                        <li><h4><b>Write your content in HTML</b></h4><p>Now you need to transfer your content to HTML. Use HTML tags such as <i>main section div</i> as building blocks for your layout. Now use previous naming (header; main content and so on) to declare CSS classes for those blocks. </p></li>
+                        <li><h4><b>Define your layout items names</b></h4><p>What I mean by that is you need to define layout item (header; main content and so on) as grid areas. Later you will use those names as areas to set where everything goes inside the grid.</p></li>
+                        <li><h4><b>Define your grid </b></h4><p>Once you have your content inside HTML and set the basic naming, define the grid using CSS properties</p></li>
+                        <li><h4><b>Define the grid container </b></h4><p>You need to define/style your grid container. Is it the whole page? Is it just part of page? How the items are placed? How much space do they take? Adjust HTML and CSS appropriately.</p></li>
+                        <li><h4><b>Define grid items </b></h4><p>Now you need to define/style your <i>grid</i> items. Where are they going to be put inside the grid? How much space they would take inside the grid? Again, adjust HTML and CSS appropriately.</p></li>
+                        <li><h4><b>Add basic styling</b></h4><p>Adjust the styling in CSS to make it look closer to the design imagined.</p></li>
+                        <li><h4><b>MAKE IT RESPONSIVE!</b></h4><p>Now it is time to make the webpage responsive. Make use of grid flow properties add media queries as necessary.</p></li>
+                        <li><h4><b>Fine tune the styling and add the magic</b></h4><p>Let your creative self go! Add all needed or wanted styling and animation!</p></li>
                     </ul>
                     <p>The following sections are presented as reference for CSS Grid</p>
                     <hr>
@@ -108,20 +107,22 @@
                     </div>
                    </div>
                    <div>
-                       <p><h2><b>Terminology</b></h2></p>
+                       <h2><b>Terminology</b></h2>
                        <ul>
-                           <li><p><h3><b>Grid Container</b></h3></p> <p>An HTML element on which <i>display:grid</i> is applied.</p> </li>
-                           <li><p><h3><b>Grid Item</b></h3></p> <p><i>Direct</i> descendents of the grid container.</p></li>
-                           <li><p><h3><b>Grid line</b></h3></p><p>The dividing lines that make up the structure of the grid. </p></li>
-                           <li><p><h3><b>Grid Cell</b></h3></p><p>The space between two adjacent column and two adjacent row lines. </p></li>
-                           <li><p><h3><b>Grid Track</b></h3></p><p>The space between two adjacent grid lines. In other words, simply rows or columns.</p></li>
-                           <li><p><h3><b>Grid Area</b></h3></p><p>The space defined by four grid lines.A grid area can be composed of any number of grid cells.</p></li>
+                           <li><h3><b>Grid Container</b></h3><p>An HTML element on which <i>display:grid</i> is applied.</p> </li>
+                           <li><h3><b>Grid Item</b></h3><p><i>Direct</i> descendents of the grid container.</p></li>
+                           <li><h3><b>Grid line</b></h3><p>The dividing lines that make up the structure of the grid.</p></li>
+                           <li><h3><b>Grid Cell</b></h3><p>The space between two adjacent column and two adjacent row lines. </p></li>
+                           <li><h3><b>Grid Track</b></h3><p>The space between two adjacent grid lines. In other words, simply rows or columns.</p></li>
+                           <li><h3><b>Grid Area</b></h3><p>The space defined by four grid lines.A grid area can be composed of any number of grid cells.</p></li>
                        </ul>
                    </div>
                    <hr>
                 </section>
                 <section class="main-section" id="Grid_Container">
-                    <h1><a class="sectionTitle" href="#Grid_Container">Grid Container</a></h1>
+                    <header>
+                        <h1><a class="sectionTitle" href="#Grid_Container">Grid Container</a></h1>
+                    </header>
                     <div class="sectionFlex">
                         <div class="textBlock">
                             <p>Display Property</p>
