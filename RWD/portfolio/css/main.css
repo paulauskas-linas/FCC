@@ -1,20 +1,13 @@
 /* Global  */
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap');
 
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-} 
+*, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0;} 
 
-html {
-    scroll-behavior: smooth;
-}
+html {scroll-behavior: smooth;}
 
-body {
-    font-family: "Lexend Mega", sans-serif;
-    font-size: 1rem;
-}
+body { font-family: "Lexend Mega", sans-serif; font-size: 1rem;}
+
+/* Global End */
 
 /* parallax effect
 formula for determining scale factor:
@@ -46,8 +39,8 @@ distance is taken from translateZ value
     position: fixed;
     top:0;
     height: 100px;
-    width: 95%;
-    margin: 0 2rem;
+    width: 100%;
+    padding: 0 2rem;;
 }
 
 nav {
@@ -55,10 +48,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: 100%;
 }
 
 .navLogo img {
-    height: 70px;
+    height: 60px;
 }
 
 .navList {
@@ -71,12 +65,14 @@ nav {
 }
 
 .navListItem {
-    padding: 0 1rem;
+    display: inline-block;
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
 }
 
 /* HEADER MAGIC END */
 
-/* SECTION MAGIC START */
+/* SECTION about MAGIC START */
 
 .aboutSection {
     display: flex;
@@ -85,29 +81,40 @@ nav {
     align-items: center;
     width: 100%;
     height: 100vh;
+    padding: 0 2rem;
 }
 
-.mainTitle {
+.aboutTitle {
+    padding-right: 25%;
     width: 50%;
     font-size: 5rem;
-    margin-left: 4rem;
-    flex-grow: none;
-    flex-shrink: none;
-    padding-right: 25%;
+    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 }
   
 .quoteWrapper {
     width: 50%;
-    flex-grow: none;
-    margin-right: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .quoteWrapper p {
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     width: 80%;
     font-size: 1.5rem;
     text-align: justify;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* SECTION projects MAGIC START */
+
+.projectsSection {
+    display: flex;
+    height: 100vh;
+    padding: 5rem 2rem;
+}
+.projectsTitle {
+    font-size: 1.25rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
