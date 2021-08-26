@@ -38,9 +38,12 @@ distance is taken from translateZ value
 .headerBar {
     position: fixed;
     top:0;
-    height: 100px;
+    z-index: 10;
+    height: 70px; /* 100 px - 1920 res */
     width: 100%;
-    padding: 0 2rem;;
+    padding: 0 2rem;
+    background-image: linear-gradient(to bottom, rgb(128, 128, 128, 1), rgb(128, 128, 128, 0.0));
+    
 }
 
 nav {
@@ -52,7 +55,7 @@ nav {
 }
 
 .navLogo img {
-    height: 60px;
+    height: 45px;  /* 60px - 1920 */
 }
 
 .navList {
@@ -66,8 +69,8 @@ nav {
 
 .navListItem {
     display: inline-block;
-    padding-left: 1.5rem;
-    font-size: 1.5rem;
+    padding-left: 1.0rem;
+    font-size: 1.25rem;
 }
 
 /* HEADER MAGIC END */
@@ -110,11 +113,347 @@ nav {
 
 .projectsSection {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    height: max-content;
+    width: 100%;
     padding: 5rem 2rem;
 }
+
 .projectsTitle {
     font-size: 1.25rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
+.projectsGridcontainer {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* gap: 1rem 4rem; row gap column gap */
+    justify-content: center;
+   
+}
+/* DESKTOPS AND FULL HD RESOLUTION SCREENS */
+@media screen and (min-width:1920px) {
+
+    .project-1 {
+        grid-area: project1;
+        grid-row-start: 1;
+        grid-column: 1 / span 4;
+    }
+    .project-2 {
+        grid-area: project2;
+        grid-row-start: 1;
+        grid-column: 5 / span 4;
+    }
+    .project-3 {
+        grid-area: project3;
+        grid-row-start: 1;
+        grid-column: 9 / span 4;
+    }
+    .project-4 {
+        grid-area: project4;
+        grid-row-start: 2;
+        grid-column: 4 / span 4;
+    }
+    .project-5 {
+        grid-area: project5;
+        grid-row-start: 2;
+        grid-column: 8 / span 4;
+    }
+}
+/* RETINA DISPLAYS MEDIA QUERY */
+@media screen 
+    and (min-width: 1200px)
+    and (max-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (min-resolution: 192dpi) 
+    {
+    .projectsGridcontainer{
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .project-1 {
+        grid-area: project1;
+        grid-row-start: 1;
+        grid-column: 3 / span 5;
+    }
+    .project-2 {
+        grid-area: project2;
+        grid-row-start: 1;
+        grid-column: 8 / span 5;
+    }
+    .project-3 {
+        grid-area: project3;
+        grid-row-start: 2;
+        grid-column: 3 / span 5;
+    }
+    .project-4 {
+        grid-area: project4;
+        grid-row-start: 2;
+        grid-column: 8 / span 5;
+    }
+    .project-5 {
+        grid-area: project5;
+        grid-row-start: 3;
+        grid-column: 6 / span 5;
+    }
+}
+/* SAFARI'S SPECIAL TREATMENT  */
+@media screen 
+    and (min-width: 1200px)
+    and (max-width: 1600px)
+    {
+    .projectsGridcontainer{
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .project-1 {
+        grid-area: project1;
+        grid-row-start: 1;
+        grid-column: 3 / span 5;
+    }
+    .project-2 {
+        grid-area: project2;
+        grid-row-start: 1;
+        grid-column: 8 / span 5;
+    }
+    .project-3 {
+        grid-area: project3;
+        grid-row-start: 2;
+        grid-column: 3 / span 5;
+    }
+    .project-4 {
+        grid-area: project4;
+        grid-row-start: 2;
+        grid-column: 8 / span 5;
+    }
+    .project-5 {
+        grid-area: project5;
+        grid-row-start: 3;
+        grid-column: 6 / span 5;
+    }
+}
+
+.projectsItem {
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "image desc";
+    grid-template-rows: max-content max-content;
+    grid-template-columns: auto auto;
+}
+
+.projectsItem-Title {
+    grid-area: title;
+    justify-self: left;
+    padding: 0.5rem;
+    overflow: visible;
+    min-width: 0;
+}
+
+.projectsItem-Desc {
+    grid-area: desc;
+    position: relative;
+    z-index: 0;
+    left: -200px;
+    min-width: 0;
+    padding-left: 1rem;
+    place-self: center;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+.projectsItem-Image:hover + .projectsItem-Desc {
+    visibility: visible;
+    left: 0;
+}
+.projectsItem-Desc p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.projectsItem-Image {
+    grid-area: image;
+    place-self: center;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    position: relative;
+    z-index: 1;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+    transition: all .3 ease-in-out;
+}
+
+.projectsItem-Image .imgPage {
+    position: relative;
+    top: 0;
+    width: 100%;
+    border-radius: 0.25rem;
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    opacity: 1;
+}
+
+.projectsItem-Image:hover .imgPage {
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+    opacity: 0.1;
+}
+
+.projectsItem-Image:hover .projectsItem-Image {
+    overflow: unset;
+}
+
+.projectsItem-Overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.projectsItem-Image:hover .projectsItem-Overlay {
+    opacity: 1;
+}
+
+.projectsItem-Link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    opacity: 0;
+    transition: .3s ease-in-out;
+
+}
+.projectsItem-Image:hover .projectsItem-Link {
+    opacity: 1;
+}
+
+.projectsItem-Link a {
+    color: black;
+    text-decoration: none;
+    padding: 30px;
+    font-size: 0.9rem;
+}
+
+.imgIcon {
+    height: 10px;
+    padding-left: 5px;
+    
+}
+
+/* SECTIION contact me MAGIC START  */
+
+.contactSection {
+    height: 100vh;
+}
+
+.contactWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 30rem;
+    text-align: center;
+}
+.inputGroup {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+.contactWrapper form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: center;
+    margin: auto;
+    width: 30rem;
+}
+
+.inputElements {
+    position: relative;
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    width: 100%;
+    /* height: 1.5rem; */
+    /* margin-top: 1rem; */
+    /* margin-bottom: 1rem; */
+    /* padding-bottom: 1rem; */
+    border: 0;
+    outline: none;
+    resize: vertical;
+    /* border-bottom: 1px solid grey; */
+    background-color: transparent;
+}
+.borderLine {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+    pointer-events: none;
+}
+.borderLine::before, .borderLine::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 200%;
+    background-color: rgb(114, 114, 114);
+    width: 0;
+}
+.borderLine::before {
+transition: width 0.3s ease-out
+}
+
+.inputElements:focus ~ .borderLine::before {
+    width: 100%;
+}
+.labelElements {
+    position: absolute;
+    pointer-events: none;
+    bottom: calc(0.25rem - 1px);
+    transition: all 0.5s ease-in-out;
+}
+
+.inputElements:focus ~ .labelElements {
+    bottom: calc(1.25rem - 1px);
+}
+.inputElements:focus + .inputElements::placeholder {
+    opacity: 1;
+}
+
+.inputElements::placeholder {
+    opacity: 0;
+}
+
+.submitButton {
+    font-size: 2rem;
+    font-family: inherit;
+    height: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    background-color: transparent;
+}
+
+.submitButton:hover {
+    cursor: pointer;
 }
