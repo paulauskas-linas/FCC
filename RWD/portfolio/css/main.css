@@ -7,6 +7,9 @@ html {scroll-behavior: smooth;}
 
 body { font-family: "Lexend Mega", sans-serif; font-size: 1rem;}
 
+.debug {
+    border: 10px solid red;
+}
 /* Global End */
 
 /* parallax effect
@@ -121,117 +124,17 @@ nav {
 }
 
 .projectsTitle {
-    font-size: 1.25rem;
+    font-size: 2.25rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .projectsGridcontainer {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    /* gap: 1rem 4rem; row gap column gap */
+    gap: 3rem 0.1rem; /*row gap column gap */
     justify-content: center;
-   
-}
-/* DESKTOPS AND FULL HD RESOLUTION SCREENS */
-@media screen and (min-width:1920px) {
-
-    .project-1 {
-        grid-area: project1;
-        grid-row-start: 1;
-        grid-column: 1 / span 4;
-    }
-    .project-2 {
-        grid-area: project2;
-        grid-row-start: 1;
-        grid-column: 5 / span 4;
-    }
-    .project-3 {
-        grid-area: project3;
-        grid-row-start: 1;
-        grid-column: 9 / span 4;
-    }
-    .project-4 {
-        grid-area: project4;
-        grid-row-start: 2;
-        grid-column: 4 / span 4;
-    }
-    .project-5 {
-        grid-area: project5;
-        grid-row-start: 2;
-        grid-column: 8 / span 4;
-    }
-}
-/* RETINA DISPLAYS MEDIA QUERY */
-@media screen 
-    and (min-width: 1200px)
-    and (max-width: 1600px)
-    and (-webkit-min-device-pixel-ratio: 2)
-    and (min-resolution: 192dpi) 
-    {
-    .projectsGridcontainer{
-        grid-template-rows: repeat(3, 1fr);
-    }
-    .project-1 {
-        grid-area: project1;
-        grid-row-start: 1;
-        grid-column: 3 / span 5;
-    }
-    .project-2 {
-        grid-area: project2;
-        grid-row-start: 1;
-        grid-column: 8 / span 5;
-    }
-    .project-3 {
-        grid-area: project3;
-        grid-row-start: 2;
-        grid-column: 3 / span 5;
-    }
-    .project-4 {
-        grid-area: project4;
-        grid-row-start: 2;
-        grid-column: 8 / span 5;
-    }
-    .project-5 {
-        grid-area: project5;
-        grid-row-start: 3;
-        grid-column: 6 / span 5;
-    }
-}
-/* SAFARI'S SPECIAL TREATMENT  */
-@media screen 
-    and (min-width: 1200px)
-    and (max-width: 1600px)
-    {
-    .projectsGridcontainer{
-        grid-template-rows: repeat(3, 1fr);
-    }
-    .project-1 {
-        grid-area: project1;
-        grid-row-start: 1;
-        grid-column: 3 / span 5;
-    }
-    .project-2 {
-        grid-area: project2;
-        grid-row-start: 1;
-        grid-column: 8 / span 5;
-    }
-    .project-3 {
-        grid-area: project3;
-        grid-row-start: 2;
-        grid-column: 3 / span 5;
-    }
-    .project-4 {
-        grid-area: project4;
-        grid-row-start: 2;
-        grid-column: 8 / span 5;
-    }
-    .project-5 {
-        grid-area: project5;
-        grid-row-start: 3;
-        grid-column: 6 / span 5;
-    }
 }
 
 .projectsItem {
@@ -242,6 +145,7 @@ nav {
     "image desc";
     grid-template-rows: max-content max-content;
     grid-template-columns: auto auto;
+    margin-bottom: 1rem;
 }
 
 .projectsItem-Title {
@@ -249,7 +153,6 @@ nav {
     justify-self: left;
     padding: 0.5rem;
     overflow: visible;
-    min-width: 0;
 }
 
 .projectsItem-Desc {
@@ -290,15 +193,15 @@ nav {
     width: 100%;
     border-radius: 0.25rem;
     -webkit-transform: scale(1.1);
-	transform: scale(1.1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+    transform: scale(1.1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
     opacity: 1;
 }
 
 .projectsItem-Image:hover .imgPage {
     -webkit-transform: scale(1.3);
-	transform: scale(1.3);
+    transform: scale(1.3);
     opacity: 0.1;
 }
 
@@ -352,20 +255,163 @@ nav {
     padding-left: 5px;
     
 }
+/* DESKTOPS AND FULL HD RESOLUTION SCREENS */
+@media screen and (min-width:1600px) {
 
+    .project-1 {
+        grid-area: project1;
+        grid-row-start: 1;
+        grid-column: 2 / span 6;
+    }
+    .project-2 {
+        grid-area: project2;
+        grid-row-start: 1;
+        grid-column: 8 / span 6;
+    }
+    .project-3 {
+        grid-area: project3;
+        grid-row-start: 1;
+        grid-column: 14 / span 6;
+    }
+    .project-4 {
+        grid-area: project4;
+        grid-row-start: 2;
+        grid-column: 6 / span 6;
+    }
+    .project-5 {
+        grid-area: project5;
+        grid-row-start: 2;
+        grid-column: 13 / span 6;
+    }
+}
+/* RETINA DISPLAYS MEDIA QUERY */
+@media screen 
+    and (min-width: 1200px)
+    and (max-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (min-resolution: 192dpi) {
+    .projectsGridcontainer{
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .project-1 {
+        grid-area: project1;
+        grid-row-start: 1;
+        grid-column: 4 / span 7;
+    }
+    .project-2 {
+        grid-area: project2;
+        grid-row-start: 1;
+        grid-column: 13 / span 7;
+    }
+    .project-3 {
+        grid-area: project3;
+        grid-row-start: 2;
+        grid-column: 4 / span 7;
+    }
+    .project-4 {
+        grid-area: project4;
+        grid-row-start: 2;
+        grid-column: 13 / span 7;
+    }
+    .project-5 {
+        grid-area: project5;
+        grid-row-start: 3;
+        grid-column: 9 / span 7;
+    }
+}
+/* SAFARI'S SPECIAL TREATMENT  */
+@media screen 
+    and (min-width: 1200px)
+    and (max-width: 1600px) {
+    .projectsGridcontainer{
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .project-1 {
+        grid-area: project1;
+        grid-row-start: 1;
+        grid-column: 4 / span 7;
+    }
+    .project-2 {
+        grid-area: project2;
+        grid-row-start: 1;
+        grid-column: 13 / span 7;
+    }
+    .project-3 {
+        grid-area: project3;
+        grid-row-start: 2;
+        grid-column: 4 / span 7;
+    }
+    .project-4 {
+        grid-area: project4;
+        grid-row-start: 2;
+        grid-column: 13 / span 7;
+    }
+    .project-5 {
+        grid-area: project5;
+        grid-row-start: 3;
+        grid-column: 9 / span 7;
+    }
+}
+/* MOBILE */
+@media screen 
+    and (max-width: 1200px)
+    {
+    .projectsGridcontainer{
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .project-1 {
+        grid-area: project1;
+        grid-row-start: 1;
+        grid-column: 3 / span 14;
+    }
+    .project-2 {
+        grid-area: project2;
+        grid-row-start: 2;
+        grid-column: 3 / span 14;
+    }
+    .project-3 {
+        grid-area: project3;
+        grid-row-start: 3;
+        grid-column: 3 / span 14;
+    }
+    .project-4 {
+        grid-area: project4;
+        grid-row-start: 4;
+        grid-column: 3 / span 14;
+    }
+    .project-5 {
+        grid-area: project5;
+        grid-row-start: 5;
+        grid-column: 3 / span 14;
+    }
+}
 /* SECTIION contact me MAGIC START  */
 
 .contactSection {
-    height: 100vh;
+    height: 80vh;
 }
 
 .contactWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
     width: 30rem;
     text-align: center;
+}
+.contactTitle {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+.contactWrapper form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: center;
+    margin: auto;
+    width: 30rem;
 }
 .inputGroup {
     position: relative;
@@ -375,14 +421,6 @@ nav {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 3rem;
-}
-.contactWrapper form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-items: center;
-    margin: auto;
-    width: 30rem;
 }
 
 .inputElements {
@@ -401,6 +439,22 @@ nav {
     /* border-bottom: 1px solid grey; */
     background-color: transparent;
 }
+
+.inputElements::placeholder {
+    opacity: 0;
+}
+
+.labelElements {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.inputElements:focus ~ .labelElements {
+    top: -1.25rem;
+}
+
 .borderLine {
     position: absolute;
     z-index: 2;
@@ -425,35 +479,78 @@ transition: width 0.3s ease-out
 .inputElements:focus ~ .borderLine::before {
     width: 100%;
 }
-.labelElements {
-    position: absolute;
-    pointer-events: none;
-    bottom: calc(0.25rem - 1px);
-    transition: all 0.5s ease-in-out;
-}
-
-.inputElements:focus ~ .labelElements {
-    bottom: calc(1.25rem - 1px);
-}
-.inputElements:focus + .inputElements::placeholder {
-    opacity: 1;
-}
-
-.inputElements::placeholder {
-    opacity: 0;
-}
 
 .submitButton {
     font-size: 2rem;
     font-family: inherit;
-    height: 2rem;
-    width: 100%;
+    text-shadow: 1px 2px 10px rgb(151, 151, 151);
+    height: 2.5rem;
+    width: 60%;
+    align-self: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 0;
     background-color: transparent;
+    transition: all 0.6s ease-out;
+    
 }
 
 .submitButton:hover {
     cursor: pointer;
+    transform: translate(0, -1rem) ;
+}
+
+/* FOOTER MAGIC */
+
+
+.footerBar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.profileWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    padding-bottom: 5rem;
+    width: 30rem;
+}
+
+.profileGroup {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 10%;
+    height: 100%;
+}
+.profileLink {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+.profileImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-out;
+}
+
+.profileText {
+    position: absolute;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.profileGroup:hover .profileText {
+    visibility: visible;
+}
+
+.profileGroup:hover .profileImage {
+    position: absolute;
+    transform: scale(0.8);
+    top: -2.5rem;
+    overflow: visible;
+    left: -2.5rem;
 }
