@@ -9,6 +9,35 @@ body { font-family: "Lexend Mega", sans-serif; font-size: 1rem;}
 
 .debug { border: 10px solid red;}
 
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2rem;
+    display: inline-block;
+    /* line-height: 1; */
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    position: relative;
+    top: 0.25rem;
+
+    /* margin-top: 5rem; */
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
 /* Global End */
 
 /* parallax effect
@@ -208,7 +237,7 @@ nav {
 
 
 
-/* HEADER MAGIC END */
+/* HEADER & HAMBURGER MENU MAGIC END */
 
 /* SECTION about MAGIC START */
 
@@ -217,6 +246,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     width: 100%;
     height: 100vh;
     padding: 0 2rem;
@@ -244,6 +274,100 @@ nav {
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
+.subtitleWrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 8rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    /* very nice centering technique for absolutely placed items
+    *  Can be used for vertical alignment
+    *  by adding y-axis translate value.
+    *  finnicky with child elements, 
+    *  especcially if they have fixed position
+     */
+}
+
+.subtitleWrapper2nd {
+    position: relative;
+    width: 50rem;
+    display: flex;
+    margin: auto;
+}
+
+.aboutSubtitle {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50rem;
+    height: 4rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: grey;
+    filter: brightness(0);
+    animation: flicker 8s linear 1.5s infinite normal none;
+    
+}
+.animControl {
+    z-index: 3;
+    opacity: 0;
+}
+.animControlLabel {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50rem;
+    height: 4rem;
+    z-index: 3;
+    cursor: pointer;
+}
+.toolTip {
+    position: absolute;
+    /* left: 50%; */
+    transform: translate(0, 90%);
+    width: 50rem;
+    height: 4rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: grey;
+    z-index: 3;
+    visibility: hidden;
+}
+
+.animControlLabel:hover ~ .toolTip {
+    visibility: visible;
+}
+
+.animControl:checked ~ .aboutSubtitle {
+    animation: none;
+}
+
+
+@keyframes flicker {
+    0% {filter: brightness(1); opacity: 1; }
+    5% {filter: brightness(0); opacity: 0.5; }
+    10% {filter: brightness(1); opacity: 1; }
+    19% {filter: brightness(0); opacity: 0.8; }
+    20% {filter: brightness(1); opacity: 1; }
+    21% {filter: brightness(1); opacity: 0.6; }
+    22% {filter: brightness(0); opacity: 0.9; }
+    23% {filter: brightness(1); opacity: 0.3; }
+    32% {filter: brightness(1); opacity: 1; }
+    36% {filter: brightness(0); opacity: 0.5; }
+    38% {filter: brightness(1); opacity: 1; }
+    65% {filter: brightness(0); opacity: 1; }
+    66% {filter: brightness(1); opacity: 0.4; }
+    67% {filter: brightness(1); opacity: 0.9; }
+    68% {filter: brightness(1); opacity: 0.1; }
+    69% {filter: brightness(1); opacity: 0.3; }
+    70% {filter: brightness(1); opacity: 0.5; }
+    71% {filter: brightness(0); opacity: 0.8; }
+    72% {filter: brightness(1); opacity: 1; }
+    90% {filter: brightness(0); opacity: 0.4; }
+    100% {filter: brightness(1); opacity: 1; }
+    
+}
+
 /* SECTION projects MAGIC START */
 
 .projectsSection {
@@ -256,8 +380,11 @@ nav {
 }
 
 .projectsTitle {
+    width: 100%;
+    margin-bottom: calc(3rem - 1vw);
     font-size: 2.25rem;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 2px 15px rgba(0, 0, 0, 0.25);
+    text-align: center;
 }
 
 .projectsGridcontainer {
