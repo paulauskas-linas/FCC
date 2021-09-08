@@ -3,7 +3,8 @@
 
 *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0;} 
 
-html {scroll-behavior: smooth;}
+html {scroll-behavior: smooth;
+font-size: 16px;}
 
 body { font-family: "Lexend Mega", sans-serif; font-size: 1rem;}
 
@@ -235,11 +236,10 @@ nav {
     }
 }
 
-
-
-/* HEADER & HAMBURGER MENU MAGIC END */
-
-/* SECTION about MAGIC START */
+/* ===== SECTION 
+/* ===== about 
+/* ===== MAGIC START
+ */
 
 .aboutSection {
     display: flex;
@@ -255,7 +255,8 @@ nav {
 .aboutTitle {
     padding-right: 25%;
     width: 50%;
-    font-size: 5rem;
+    /* font-size: 5rem; */
+    font-size: calc(3rem + 2vw);
     text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 }
   
@@ -269,14 +270,14 @@ nav {
 .quoteWrapper p {
     padding-bottom: 1rem;
     width: 80%;
-    font-size: 1.5rem;
+    font-size: calc(1rem + 1vw);
     text-align: justify;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .subtitleWrapper {
     position: absolute;
-    width: 100%;
+    width: 100vw;
     bottom: 8rem;
     left: 50%;
     transform: translate(-50%, 0);
@@ -284,13 +285,14 @@ nav {
     *  Can be used for vertical alignment
     *  by adding y-axis translate value.
     *  finnicky with child elements, 
-    *  especcially if they have fixed position
+    *  especially if they have fixed position
      */
 }
 
 .subtitleWrapper2nd {
     position: relative;
-    width: 50rem;
+    display: inline-block;
+    width: calc(100vw - 10%);
     display: flex;
     margin: auto;
 }
@@ -299,9 +301,10 @@ nav {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 50rem;
+    width: calc(100vw - 10%);
     height: 4rem;
-    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-size: calc(1rem + 2vw);
     text-align: center;
     color: grey;
     filter: brightness(0);
@@ -325,7 +328,7 @@ nav {
     position: absolute;
     /* left: 50%; */
     transform: translate(0, 90%);
-    width: 50rem;
+    width: calc(100vw - 10%);
     height: 4rem;
     text-align: center;
     font-size: 1.2rem;
@@ -333,7 +336,55 @@ nav {
     z-index: 3;
     visibility: hidden;
 }
+@media (any-hover: none) {
+    
+    .animControlLabel {
+        cursor: unset;
+    }
 
+    .toolTip {
+        visibility: visible;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .aboutSection {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .aboutTitle {
+        padding-right: unset;
+        text-align: center;
+        width: 100%;
+        height: 35vh;
+
+    }
+    .quoteWrapper{
+        width: calc(100vw - 5%);
+        align-items: center;
+        height: 35vh;
+    }
+}
+@media screen and (max-width: 800px) {
+    .subtitleWrapper {
+        bottom: 10rem;
+    }
+    
+    .toolTip {
+        transform: translate(0, 150%);
+    }
+}
+@media screen and (max-width: 420px) {
+    .subtitleWrapper {
+        bottom: 12rem;
+    }
+    .toolTip {
+        transform: translate(0, 130%);
+    }
+    .quoteWrapper p {
+        font-size: calc(0.75rem + 1vw);
+
+    }
+}
 .animControlLabel:hover ~ .toolTip {
     visibility: visible;
 }
@@ -455,7 +506,7 @@ nav {
     transform: scale(1.1);
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
-    opacity: 1;
+    opacity: 0.7;
 }
 
 .projectsItem-Image:hover .imgPage {
@@ -514,6 +565,33 @@ nav {
     padding-left: 5px;
     
 }
+@media (any-hover: none) {
+    .projectsItem-Desc {
+        left: 0;
+        visibility: visible;
+    }
+    .projectsItem-Image .imgPage {
+        opacity: 0.5;
+    }
+
+    .projectsItem-Overlay {
+        opacity: 1;
+        background-color: rgba(165, 165, 165, 0.9);
+        top: unset;
+        bottom: 0;
+        width: 100%;
+        height: 30%;
+    }
+    .projectsItem-Link {
+        opacity: 1;
+        top: unset;
+        bottom: 0;
+        height: 30%;
+
+    }
+
+}
+
 /* DESKTOPS AND FULL HD RESOLUTION SCREENS */
 @media screen and (min-width:1600px) {
 
@@ -644,6 +722,17 @@ nav {
         grid-column: 3 / span 14;
     }
 }
+@media screen 
+    and (max-width: 750px) {
+    .projectsItem-Desc {
+        display: none;
+    }    
+    .projectsItem {
+        grid-template-areas: 
+        "title title"
+        "image image";
+    }
+}
 /* SECTIION contact me MAGIC START  */
 
 .contactSection {
@@ -658,8 +747,13 @@ nav {
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
-    width: 30rem;
+    width: calc(100vw - 10%);
     text-align: center;
+}
+@media screen and (min-width: 750px) {
+    .contactWrapper {
+        width: 30rem;
+    }
 }
 .contactTitle {
     font-size: 2rem;
@@ -671,7 +765,7 @@ nav {
     align-items: flex-start;
     justify-items: center;
     margin: auto;
-    width: 30rem;
+    width: 100%;
 }
 .inputGroup {
     position: relative;
@@ -733,7 +827,7 @@ nav {
     width: 0;
 }
 .borderLine::before {
-transition: width 0.3s ease-out
+    transition: width 0.3s ease-out
 }
 
 .inputElements:focus ~ .borderLine::before {
@@ -766,7 +860,9 @@ transition: width 0.3s ease-out
 .footerBar {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
 }
 .profileWrapper {
     display: flex;
@@ -804,14 +900,16 @@ transition: width 0.3s ease-out
     -webkit-font-smoothing: antialiased;
 }
 
-.profileGroup:hover .profileText {
-    visibility: visible;
-}
+@media (any-hover: hover) {
+    .profileGroup:hover .profileText {
+        visibility: visible;
+    }
 
-.profileGroup:hover .profileImage {
-    position: absolute;
-    transform: scale(0.8);
-    top: -2.5rem;
-    overflow: visible;
-    left: -2.5rem;
+    .profileGroup:hover .profileImage {
+        position: absolute;
+        transform: scale(0.8);
+        top: -2.5rem;
+        overflow: visible;
+        left: -2.5rem;
+    }
 }
