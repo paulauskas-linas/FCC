@@ -88,7 +88,7 @@ nav {
     width: 0;
 }
 .underLine::before {
-    transition: width 0.3s ease-out
+    transition: width 0.5s ease-out
 }
 .navListItem:hover ~ .underLine::before {
     width: 100%;
@@ -452,7 +452,7 @@ nav {
     padding-left: 1rem;
     place-self: center;
     visibility: hidden;
-    transition: all .5s ease-in-out;
+    transition: all .5s ease-out;
 }
 .projectsItem-Image:hover + .projectsItem-Desc {
     visibility: visible;
@@ -833,7 +833,7 @@ nav {
     width: 0;
 }
 .borderLine::before {
-    transition: width 0.3s ease-out
+    transition: width 0.5s ease-out
 }
 
 .inputElements:focus ~ .borderLine::before {
@@ -858,7 +858,7 @@ nav {
     margin-bottom: 1rem;
     border: 0;
     background-color: transparent;
-    transition: all 0.6s ease-out;
+    transition: all 0.8s ease-out;
     
 }
 
@@ -876,53 +876,59 @@ nav {
     width: 100vw;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 .profileWrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: auto;
     padding-bottom: 5rem;
-    width: 30rem;
 }
 
 .profileGroup {
+    will-change: width;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-content: center;
-    width: 10%;
+    align-content: flex-start;
+    width: 100px;
     height: 100%;
+    transition: width 0.8s ease-out 0s;
 }
 .profileLink {
-    position: relative;
-    width: 100%;
     height: 100%;
-    color: black;
 }
 .profileImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 0.3s ease-in-out;
+    width: 3rem;
+    margin-right: 1rem;
+    transition: width 0.8s ease-out 0s;
 }
 
 .profileText {
-    position: absolute;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-    -webkit-font-smoothing: antialiased;
+    will-change: width;
+    width: 0px;
+    overflow: hidden;
+    transition: width 0.8s ease-out 0s;
+}
+
+.profileText a {
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: black;
+    transition: width 0.8s ease-out 0s;
 }
 
 @media (any-hover: hover) {
-    .profileGroup:hover .profileText {
-        visibility: visible;
+    .profileGroup:hover {
+        width: 14rem;
+        justify-content: start;
+        align-items: flex-start;
     }
-
-    .profileGroup:hover .profileImage {
-        position: absolute;
-        transform: scale(0.75);
-        top: -2.5rem;
-        overflow: visible;
-        left: -2.5rem;
+    .profileGroup:hover .profileText {
+        width: -webkit-max-content;
+        width: max-content;
+        padding: 0 0.25rem;
+        /* overflow: visible; */
     }
 }
